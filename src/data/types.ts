@@ -16,6 +16,17 @@ export interface CourseNode extends Course {
 	requirementType?: "major" | "minor" | "common" | "elective";
 }
 
+export interface RequirementGroupCloud {
+	id: string;
+	groupId: string;
+	label: string;
+	requiredUnits: number;
+	courseIds: string[];
+	x?: number;
+	y?: number;
+	size?: number;
+}
+
 export interface RequirementGroup {
 	id: string;
 	label: string;

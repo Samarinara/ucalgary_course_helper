@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef, useState, useMemo } from "react";
 import dynamic from "next/dynamic";
-import type { CourseNode } from "../data/types";
+import type { CourseNode, RequirementGroupCloud } from "../data/types";
 import type { ForceGraphMethods } from "react-force-graph-2d";
 import { MAJORS } from "../data/courses";
 
@@ -101,70 +101,70 @@ const CourseGraph: React.FC<CourseGraphProps> = ({
 		const label = node.label;
 		const fontSize = 12 / globalScale;
 		ctx.font = `${fontSize}px Sans-Serif`;
-		const textWidth = ctx.measureText(label).width;
+		ctx.textAlign = "center";
+		ctx.textBaseline = "middle";
 
-		ctx.fillStyle = getNodeColor(node.status, node.isPrereqSatisfied);
+		// Check if this is a requirement group cloud
+		if (node.id.startsWith("cloud-")) {
+			// Draw large encompassing circle for requirement groups
+			const size = node.size || 100;
+			ctx.beginPath();
+			ctx.arc(node.x, node.y, size, 0, 2 * Math.PI, false);
+			ctx.fillStyle = "rgba(59, 130, 246, 0.1)"; // Very light blue
+			ctx.fill();
+			ctx.strokeStyle = "rgba(59, 130, 246, 0.3)"; // Light blue border
+			ctx.lineWidth = 2;
+			ctx.setLineDash([5, 5]);
+			ctx.stroke();
+			ctx.setLineDash([]);
 
-		// Draw shape with patterns for colorblind accessibility
-		if (node.shape === "square") {
-			ctx.fillRect(node.x - 6, node.y - 6, 12, 12);
-			// Add pattern for colorblind users
-			if (node.status === "completed") {
-				// Add cross pattern for completed
-				ctx.strokeStyle = "#ffffff";
-				ctx.lineWidth = 2;
-				ctx.beginPath();
-				ctx.moveTo(node.x - 3, node.y - 3);
-				ctx.lineTo(node.x + 3, node.y + 3);
-				ctx.moveTo(node.x + 3, node.y - 3);
-				ctx.lineTo(node.x - 3, node.y + 3);
-				ctx.stroke();
-			} else if (node.status === "in_progress") {
-				// Add dot pattern for in-progress
-				ctx.fillStyle = "#ffffff";
-				ctx.beginPath();
-				ctx.arc(node.x, node.y, 2, 0, 2 * Math.PI, false);
-				ctx.fill();
-			}
-		} else if (node.shape === "circle") {
+			// Draw label
+			ctx.fillStyle = "rgba(59, 130, 246, 0.8)";
+			ctx.font = `${fontSize * 1.2}px Sans-Serif`;
+			ctx.fillText(label, node.x, node.y);
+			return;
+		}
+
+		// Regular course node rendering
+		const isPrereqSatisfied = node.isPrereqSatisfied;
+		const nodeColor = getNodeColor(node.status, isPrereqSatisfied);
+
+		// Draw node shape based on type
+		const size = node.shape === "circle" ? 8 : 6;
+		if (node.shape === "circle") {
 			ctx.beginPath();
-			ctx.arc(node.x, node.y, 6, 0, 2 * Math.PI, false);
+			ctx.arc(node.x, node.y, size, 0, 2 * Math.PI, false);
+			ctx.fillStyle = nodeColor;
 			ctx.fill();
-			// Add pattern for colorblind users
-			if (node.status === "completed") {
-				ctx.strokeStyle = "#ffffff";
-				ctx.lineWidth = 2;
-				ctx.beginPath();
-				ctx.moveTo(node.x - 3, node.y);
-				ctx.lineTo(node.x + 3, node.y);
-				ctx.stroke();
-			} else if (node.status === "in_progress") {
-				ctx.fillStyle = "#ffffff";
-				ctx.beginPath();
-				ctx.arc(node.x, node.y, 2, 0, 2 * Math.PI, false);
-				ctx.fill();
-			}
-		} else if (node.shape === "squircle") {
-			// Approximate squircle
+			// No border - clean look
+		} else {
+			// Square or squircle
+			const halfSize = size;
+			ctx.fillStyle = nodeColor;
+			ctx.fillRect(
+				node.x - halfSize,
+				node.y - halfSize,
+				halfSize * 2,
+				halfSize * 2,
+			);
+			// No border - clean look
+		}
+
+		// Add pattern for colorblind users
+		if (node.status === "completed") {
+			ctx.strokeStyle = "#ffffff";
+			ctx.lineWidth = 2;
 			ctx.beginPath();
-			ctx.roundRect(node.x - 6, node.y - 6, 12, 12, 4);
+			ctx.moveTo(node.x - 3, node.y - 3);
+			ctx.lineTo(node.x + 3, node.y + 3);
+			ctx.moveTo(node.x + 3, node.y - 3);
+			ctx.lineTo(node.x - 3, node.y + 3);
+			ctx.stroke();
+		} else if (node.status === "in_progress") {
+			ctx.fillStyle = "#ffffff";
+			ctx.beginPath();
+			ctx.arc(node.x, node.y, 2, 0, 2 * Math.PI, false);
 			ctx.fill();
-			// Add pattern for colorblind users
-			if (node.status === "completed") {
-				ctx.strokeStyle = "#ffffff";
-				ctx.lineWidth = 2;
-				ctx.beginPath();
-				ctx.moveTo(node.x - 3, node.y - 3);
-				ctx.lineTo(node.x + 3, node.y + 3);
-				ctx.moveTo(node.x + 3, node.y - 3);
-				ctx.lineTo(node.x - 3, node.y + 3);
-				ctx.stroke();
-			} else if (node.status === "in_progress") {
-				ctx.fillStyle = "#ffffff";
-				ctx.beginPath();
-				ctx.arc(node.x, node.y, 2, 0, 2 * Math.PI, false);
-				ctx.fill();
-			}
 		}
 
 		ctx.textAlign = "center";
@@ -178,17 +178,17 @@ const CourseGraph: React.FC<CourseGraphProps> = ({
 	};
 
 	const getNodeColor = (status: string, isPrereqSatisfied?: boolean) => {
-		// Colorblind-friendly color scheme: Red, Yellow, Blue
+		// New color scheme with red (#CF0722) and yellow (#FCCA00) accents
 		let baseColor = "#9ca3af"; // Gray default
 		switch (status) {
 			case "completed":
-				baseColor = "#2563eb"; // Blue
+				baseColor = "#2563eb"; // Blue (unchanged for completed)
 				break;
 			case "in_progress":
-				baseColor = "#f59e0b"; // Yellow/Orange
+				baseColor = "#FCCA00"; // Yellow accent
 				break;
 			case "required":
-				baseColor = "#dc2626"; // Red
+				baseColor = "#CF0722"; // Red accent
 				break;
 			case "optional":
 				baseColor = "#2563eb"; // Blue (same as completed for simplicity)
@@ -198,16 +198,20 @@ const CourseGraph: React.FC<CourseGraphProps> = ({
 				break;
 		}
 
-		// Apply opacity if prerequisites are not satisfied
+		// Apply transparency to all nodes so arrows are visible
+		const r = parseInt(baseColor.slice(1, 3), 16);
+		const g = parseInt(baseColor.slice(3, 5), 16);
+		const b = parseInt(baseColor.slice(5, 7), 16);
+
+		// Apply 85% opacity for all nodes
+		let opacity = 0.85;
+
+		// Additional opacity reduction if prerequisites are not satisfied
 		if (!isPrereqSatisfied && status !== "completed") {
-			// Convert hex to rgba with reduced opacity
-			const r = parseInt(baseColor.slice(1, 3), 16);
-			const g = parseInt(baseColor.slice(3, 5), 16);
-			const b = parseInt(baseColor.slice(5, 7), 16);
-			return `rgba(${r}, ${g}, ${b}, 0.5)`;
+			opacity = 0.5;
 		}
 
-		return baseColor;
+		return `rgba(${r}, ${g}, ${b}, ${opacity})`;
 	};
 
 	// Create requirement group links for visual grouping (major-specific)
@@ -251,6 +255,57 @@ const CourseGraph: React.FC<CourseGraphProps> = ({
 		return links;
 	}, [nodes, selectedMajorId]);
 
+	// Create requirement group clouds for visualization
+	const requirementGroupClouds = useMemo(() => {
+		const clouds: RequirementGroupCloud[] = [];
+
+		if (!selectedMajorId) return clouds;
+
+		const selectedMajor = MAJORS.find((major) => major.id === selectedMajorId);
+		if (!selectedMajor) return clouds;
+
+		selectedMajor.requirementGroups.forEach((group) => {
+			if (group.courses.length > 2 && group.requiredUnits) {
+				// Only create clouds for groups with 3+ courses and credit requirements
+				const groupNodes = nodes.filter((node) =>
+					group.courses.includes(node.id),
+				);
+
+				if (groupNodes.length >= 3) {
+					// Calculate cloud size based on number of courses
+					const baseSize = 80;
+					const sizeIncrement = 15;
+					const cloudSize = baseSize + groupNodes.length * sizeIncrement;
+
+					clouds.push({
+						id: `cloud-${group.id}`,
+						groupId: group.id,
+						label: `${group.label} (${group.requiredUnits} credits)`,
+						requiredUnits: group.requiredUnits,
+						courseIds: group.courses,
+						size: cloudSize,
+					});
+				}
+			}
+		});
+
+		return clouds;
+	}, [nodes, selectedMajorId]);
+
+	// Combine regular nodes with cloud nodes
+	const allNodes = [
+		...nodes,
+		...requirementGroupClouds.map((cloud) => ({
+			...cloud,
+			status: "group" as const,
+			shape: "circle" as const,
+			requirementType: "major" as const,
+			id: cloud.id,
+			label: cloud.label,
+			prerequisites: [],
+		})),
+	];
+
 	const allLinks = [...links, ...requirementGroupLinks];
 
 	return (
@@ -262,7 +317,7 @@ const CourseGraph: React.FC<CourseGraphProps> = ({
 				ref={fgRef}
 				width={dimensions.width}
 				height={dimensions.height}
-				graphData={{ nodes, links: allLinks }}
+				graphData={{ nodes: allNodes, links: allLinks }}
 				nodeLabel="label"
 				nodeCanvasObject={paintNode}
 				linkDirectionalArrowLength={3.5}
@@ -282,8 +337,8 @@ const CourseGraph: React.FC<CourseGraphProps> = ({
 					if (onNodeRightClick) {
 						onNodeRightClick(node);
 					}
-					// Toggle completion status on right-click
-					if (onCourseStatusChange) {
+					// Toggle completion status on right-click (only for actual courses, not clouds)
+					if (onCourseStatusChange && !node.id.startsWith("cloud-")) {
 						const currentStatus = node.status;
 						if (currentStatus === "completed") {
 							onCourseStatusChange(node.id, "planned");

@@ -85,7 +85,52 @@ const CreditTracker: React.FC<CreditTrackerProps> = ({
 					</div>
 				</div>
 
-				<div className="grid grid-cols-2 gap-2 text-xs">
+				{/* Requirement Groups Section */}
+				{progress.requirementGroups.length > 0 && (
+					<div className="mt-4 pt-4 border-t border-slate-200">
+						<h4 className="text-sm font-semibold text-slate-700 mb-3">
+							Requirement Groups
+						</h4>
+						<div className="space-y-3">
+							{progress.requirementGroups.map((group) => {
+								const groupPercentage =
+									group.requiredValue > 0
+										? (group.completedValue / group.requiredValue) * 100
+										: 0;
+
+								return (
+									<div key={group.id} className="bg-slate-50 rounded-lg p-3">
+										<div className="flex items-center justify-between mb-2">
+											<span className="text-sm font-medium text-slate-700">
+												{group.label}
+											</span>
+											<span className="text-xs text-slate-600">
+												{group.completedValue}/{group.requiredValue}
+											</span>
+										</div>
+										<div className="w-full bg-slate-200 rounded-full h-1.5">
+											<div
+												className="h-1.5 rounded-full transition-all duration-500 ease-out"
+												style={{
+													width: `${Math.min(groupPercentage, 100)}%`,
+													backgroundColor:
+														group.type === "credits" ? "#FCCA00" : "#CF0722",
+												}}
+											/>
+										</div>
+										{group.type === "credits" && (
+											<p className="text-xs text-slate-500 mt-1">
+												Credit-based requirement
+											</p>
+										)}
+									</div>
+								);
+							})}
+						</div>
+					</div>
+				)}
+
+				<div className="grid grid-cols-2 gap-2 text-xs mt-3">
 					{progress.requirementGroups.map((group) => (
 						<div key={group.id} className="flex items-center">
 							<div className="w-2 h-2 bg-green-500 rounded-full mr-1"></div>
@@ -118,7 +163,7 @@ const CreditTracker: React.FC<CreditTrackerProps> = ({
 					Overall Progress
 				</h2>
 				<div className="flex justify-center mb-4">
-					<ProgressRing percentage={overallPercentage} color="#3b82f6" />
+					<ProgressRing percentage={overallPercentage} color="#CF0722" />
 				</div>
 				<div className="text-sm text-slate-600">
 					{totalCompletedUnits} / {totalRequiredUnits} total units
@@ -129,7 +174,7 @@ const CreditTracker: React.FC<CreditTrackerProps> = ({
 			<RequirementCard
 				title={`${majorName} Major`}
 				progress={progress.majorProgress}
-				color="#3b82f6"
+				color="#CF0722"
 			/>
 
 			{/* Minor Progress (if applicable) */}
@@ -137,7 +182,7 @@ const CreditTracker: React.FC<CreditTrackerProps> = ({
 				<RequirementCard
 					title={`${minorName} Minor`}
 					progress={progress.minorProgress}
-					color="#8b5cf6"
+					color="#FCCA00"
 				/>
 			)}
 

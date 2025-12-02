@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import type { Major, Minor, StudentProgress } from "../data/types";
 import { ALL_COURSES } from "../data/courses";
+import RequirementSection from "./RequirementSection";
+import SectionPopup from "./SectionPopup";
 
 interface RequirementsDashboardProps {
 	major: Major;
@@ -26,7 +28,7 @@ const CourseRequirementRow: React.FC<{
 	const getStatusColor = (status: string) => {
 		switch (status) {
 			case "completed":
-				return "bg-green-100 text-green-800 border-green-200";
+				return "bg-blue-100 text-blue-800 border-blue-200";
 			case "in_progress":
 				return "bg-yellow-100 text-yellow-800 border-yellow-200";
 			default:
@@ -109,8 +111,11 @@ const OptionalGroupSection: React.FC<{
 			</div>
 			<div className="w-full bg-slate-200 rounded-full h-2 mb-1">
 				<div
-					className="h-2 rounded-full bg-blue-500 transition-all duration-500 ease-out"
-					style={{ width: `${Math.min(percentage, 100)}%` }}
+					className="h-2 rounded-full transition-all duration-500 ease-out"
+					style={{
+						width: `${Math.min(percentage, 100)}%`,
+						backgroundColor: "#FCCA00",
+					}}
 				/>
 			</div>
 			<div className="text-xs text-slate-600">
@@ -126,143 +131,81 @@ const RequirementsDashboard: React.FC<RequirementsDashboardProps> = ({
 	progress,
 	onCourseClick,
 }) => {
+	const [selectedSection, setSelectedSection] = useState<{
+		type: "major" | "minor";
+		progress: any;
+		title: string;
+	} | null>(null);
+
+	const handleSectionClick = (
+		type: "major" | "minor",
+		title: string,
+		progressData: any,
+	) => {
+		setSelectedSection({ type, title, progress: progressData });
+	};
+
+	const closeSectionPopup = () => {
+		setSelectedSection(null);
+	};
 	return (
-		<div className="space-y-6">
-			{/* Major Requirements */}
-			<div className="bg-white rounded-lg border border-slate-200 p-4 shadow-sm">
-				<h3 className="font-bold text-lg text-slate-800 mb-4">
-					{major.label} Major Requirements
-				</h3>
-
-				<div className="space-y-4">
-					{/* Required Courses */}
-					<div>
-						<h4 className="font-semibold text-slate-700 mb-3">
-							Required Courses
-						</h4>
-						<div className="space-y-2">
-							{major.requiredCourses.map((courseId) => (
-								<CourseRequirementRow
-									key={courseId}
-									courseId={courseId}
-									isRequired={true}
-									requirementType="Major Required"
-									progress={progress}
-									onCourseClick={onCourseClick}
-								/>
-							))}
-						</div>
-					</div>
-
-					{/* Optional Groups */}
-					{major.requirementGroups.map((group) => (
-						<div key={group.id} className="border-t border-slate-200 pt-4">
-							<OptionalGroupSection
-								groupLabel={group.label}
-								courses={group.courses}
-								requiredUnits={group.requiredUnits || 0}
-								progress={progress}
-							/>
-						</div>
-					))}
-				</div>
-			</div>
-
-			{/* Minor Requirements */}
-			{minor && (
-				<div className="bg-white rounded-lg border border-slate-200 p-4 shadow-sm mt-6">
+		<>
+			<div className="space-y-6">
+				{/* Major Requirements */}
+				<div className="bg-white rounded-lg border border-slate-200 p-4 shadow-sm">
 					<h3 className="font-bold text-lg text-slate-800 mb-4">
-						{minor.label} Minor Requirements
+						{major.label} Major Requirements
 					</h3>
 
 					<div className="space-y-4">
-						{/* Required Courses */}
-						<div>
-							<h4 className="font-semibold text-slate-700 mb-3">
-								Required Courses
-							</h4>
-							<div className="space-y-2">
-								{minor.requiredCourses.map((courseId) => (
-									<CourseRequirementRow
-										key={courseId}
-										courseId={courseId}
-										isRequired={true}
-										requirementType="Minor Required"
-										progress={progress}
-										onCourseClick={onCourseClick}
-									/>
-								))}
-							</div>
+						<RequirementSection
+							title={`${major.label} Major`}
+							progress={progress.majorProgress}
+							onSectionClick={() =>
+								handleSectionClick(
+									"major",
+									`${major.label} Major`,
+									progress.majorProgress,
+								)
+							}
+						/>
+					</div>
+				</div>
+
+				{/* Minor Requirements */}
+				{minor && (
+					<div className="bg-white rounded-lg border border-slate-200 p-4 shadow-sm mt-6">
+						<h3 className="font-bold text-lg text-slate-800 mb-4">
+							{minor.label} Minor Requirements
+						</h3>
+
+						<div className="space-y-4">
+							<RequirementSection
+								title={`${minor.label} Minor`}
+								progress={progress.minorProgress!}
+								onSectionClick={() =>
+									handleSectionClick(
+										"minor",
+										`${minor.label} Minor`,
+										progress.minorProgress!,
+									)
+								}
+							/>
 						</div>
-
-						{/* Optional Groups */}
-						{minor.requirementGroups.map((group) => (
-							<div key={group.id} className="border-t border-slate-200 pt-4">
-								<OptionalGroupSection
-									groupLabel={group.label}
-									courses={group.courses}
-									requiredUnits={group.requiredUnits || 0}
-									progress={progress}
-								/>
-							</div>
-						))}
 					</div>
-				</div>
-			)}
-
-			{/* Summary Statistics */}
-			<div className="bg-slate-50 rounded-lg border border-slate-200 p-4">
-				<h3 className="font-bold text-lg text-slate-800 mb-3">Summary</h3>
-				<div className="grid grid-cols-2 gap-4 text-sm">
-					<div className="flex justify-between">
-						<span className="text-slate-600">Major Required Courses:</span>
-						<span className="font-medium text-slate-800">
-							{major.requiredCourses.length}
-						</span>
-					</div>
-					<div className="flex justify-between">
-						<span className="text-slate-600">Completed Major Courses:</span>
-						<span className="font-medium text-green-600">
-							{
-								major.requiredCourses.filter((id) =>
-									progress.completedCourses.has(id),
-								).length
-							}
-						</span>
-					</div>
-					<div className="flex justify-between">
-						<span className="text-slate-600">In Progress:</span>
-						<span className="font-medium text-yellow-600">
-							{
-								major.requiredCourses.filter((id) =>
-									progress.inProgressCourses.has(id),
-								).length
-							}
-						</span>
-					</div>
-					{minor && (
-						<>
-							<div className="flex justify-between">
-								<span className="text-slate-600">Minor Required Courses:</span>
-								<span className="font-medium text-slate-800">
-									{minor.requiredCourses.length}
-								</span>
-							</div>
-							<div className="flex justify-between">
-								<span className="text-slate-600">Completed Minor Courses:</span>
-								<span className="font-medium text-green-600">
-									{
-										minor.requiredCourses.filter((id) =>
-											progress.completedCourses.has(id),
-										).length
-									}
-								</span>
-							</div>
-						</>
-					)}
-				</div>
+				)}
 			</div>
-		</div>
+
+			{/* Section Popup */}
+			{selectedSection && (
+				<SectionPopup
+					isOpen={true}
+					onClose={closeSectionPopup}
+					title={selectedSection.title}
+					progress={selectedSection.progress}
+				/>
+			)}
+		</>
 	);
 };
 

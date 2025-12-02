@@ -17,6 +17,8 @@ import ControlPanel from "../components/ControlPanel";
 import CreditTracker from "../components/CreditTracker";
 import CourseSelectionPanel from "../components/CourseSelectionPanel";
 import RequirementsDashboard from "../components/RequirementsDashboard";
+import HelpMenu from "../components/HelpMenu";
+import AboutMenu from "../components/AboutMenu";
 import {
 	loadCourseProgress,
 	saveCourseProgress,
@@ -169,9 +171,15 @@ export default function Home() {
 		<main className="flex h-screen flex-row overflow-hidden bg-slate-100">
 			{/* Main Graph Area */}
 			<div className="flex-1 flex flex-col p-4">
-				<h1 className="text-2xl font-bold mb-4 text-slate-800">
-					Engineering Course Graph
-				</h1>
+				<div className="flex items-center justify-between mb-4">
+					<h1 className="text-2xl font-bold text-slate-800">
+						Engineering Course Graph
+					</h1>
+					<div className="flex items-center space-x-2">
+						<AboutMenu />
+						<HelpMenu />
+					</div>
+				</div>
 				<div className="flex-1 bg-white rounded-xl shadow-lg overflow-hidden border border-slate-200">
 					<CourseGraph
 						nodes={nodes}
