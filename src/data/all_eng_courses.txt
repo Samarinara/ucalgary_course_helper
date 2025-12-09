@@ -1,0 +1,447 @@
+Bachelor of Science in Biomedical Engineering (BSc)
+
+Program name: Bachelor of Science in Biomedical Engineering
+ucalgary.ca
+.
+
+Year 1 (common core): Math 275 (Calc I), Math 277 (Calc II), Math 211 (Linear Algebra), ENGG 200 (Design & Innovation), ENGG 204 (Materials), ENGG 225 (Fundamentals of Circuits), ENDG 233 (Programming), Physics 259 (E&M)
+ucalgary.ca
+schulich.ucalgary.ca
+.
+
+Year 2 (major core): Courses in mechanics, circuits, biology, statistics, etc. (Examples from similar programs include ENGG 349 (Dynamics), BIOE 301 (Intro to BME), BIOE 327 (Circuits for Bioengineers), BIOE 319 (Stats for Sciences))
+ucalgary.ca
+ucalgary.ca
+.
+
+Year 3 (major core): Core engineering courses (e.g. ENGG xxx, BIOE xxx) plus electives. Often includes advanced topics like design and statistics. In one outline, 3rd-year students take ENPH 488 (Fundamentals of Circuits), ENPH 491 (Multiphysics Design), ENEL 475 (EM Fields), PHYS 449 (Statistical Mechanics), PHYS 443 (Quantum)
+schulich.ucalgary.ca
+, plus 3–4 complementary studies courses.
+
+Year 4 (capstone & electives): A two-term team design project (capstone), advanced BME/engineering electives, and remaining complementary studies. For example, a schedule may include ENGG 501–502 (Capstone Design 1–2) and courses like PHYS 375 (Optics) and PHEN 501 (Research Project)
+schulich.ucalgary.ca
+.
+
+Requirements structure: The program requires about 132–138 credits (44–46 half courses)
+ucalgary.ca
+. Core technical courses are prescribed each year. In upper years, students must also take several technical electives (typically 2–4 half-course equivalents in 3rd/4th year) and complementary studies courses (humanities/social sciences, etc. 1–3 half-courses per year)
+ucalgary.ca
+ucalgary.ca
+.
+
+Notes: Prerequisites flow naturally: 1st-year science/math courses are prerequisites for 2nd-year core. All students complete the same common first-year (as listed above)
+ucalgary.ca
+. The BME program may include a block workshop (e.g. “Dynamic Simulation Workshop”) in 3rd/4th year.
+
+Bachelor of Science in Chemical Engineering
+
+Program name: Bachelor of Science in Chemical Engineering
+ucalgary.ca
+.
+
+Year 1: Common core (Math 275/277/211, ENGG 200/204/225, ENDG 233, Physics 259, etc.)
+ucalgary.ca
+schulich.ucalgary.ca
+.
+
+Year 2: Core chemical engineering fundamentals such as thermodynamics, fluid mechanics, chemistry, statistics, solid mechanics, and circuits. For example, typical 2nd-year courses include Applied Math 307 (Differential Equations), Chem 409 (Applied Chemistry), CHEE 315 (Process Calc), CHEE 331 (Fluid Dynamics), ENGG 319 (Prob/Stats), ENGG 317 (Mechanics of Solids), ENGG 349 (Dynamics), and a complementary studies course
+ucalgary.ca
+.
+
+Year 3: Nine core courses plus one technical elective (0.5 course) and one complementary studies (0.5). Core 3rd-year courses include CHEM 409 (Chem Pathways), CHEE 401 (Process Analysis), CHEE 403 (Heat Transfer), CHEE 405 (Separation I), CHEE 421 (Kinetics), CHEE 423 (Process Dev), CHEE 427 (Thermodynamics), CHEE 429 (Dynamics & Control), ENGG 407 (Numerical Methods)
+ucalgary.ca
+ucalgary.ca
+. Students also take one half-course elective (any engineering technical elective) and one half-course of complementary studies
+ucalgary.ca
+.
+
+Year 4: Core courses plus electives. Example 4th-year requirements include CHEM 579 (Colloid Chem), CHEE 501 (Transport Phenomena), CHEE 505 (Separation II), CHEE 511 (Process Design I), CHEE 529 (Dynamics & Control), CHEE 531 (Process Design II), CHEE 551 (Lab), and ENGG 513 (Engineering Ethics/Prof Practice)
+ucalgary.ca
+ucalgary.ca
+. In addition, two technical electives (total 1.0 course) and one complementary course (0.5) are required
+ucalgary.ca
+. (Often the CHEE 106 Dynamic Simulation Workshop is taken as a block course as well.)
+
+Requirements structure: The BSc (Eng) requires 44–46 half-courses (132–138 credits)
+ucalgary.ca
+. Every year includes prescribed “core” courses and a set of elective slots. Specifically, 3rd year has 1 half-course technical elective and 1 half-course complementary study
+ucalgary.ca
+, while 4th year has 2 half-course technical electives and 1 half-course complementary
+ucalgary.ca
+. Elective courses must be engineering or science courses approved by the department.
+
+Special rules: The design courses CHEE 501–531 are typically taken in strict sequence (Pr. CHEE 501, Pr. CHEE 529, 531). Some core courses have prerequisites in 2nd year (e.g. CHEE 401 requires earlier math/chem/statics). Complementary studies must meet Engineering’s breadth requirement (humanities and social sciences).
+
+Bachelor of Science in Civil Engineering
+
+Program name: Bachelor of Science in Civil Engineering
+ucalgary.ca
+.
+
+Year 1: Common engineering core (Math 275/277/211, ENGG 200/202/204/212/225, ENDG 233, Physics 259, etc.)
+ucalgary.ca
+schulich.ucalgary.ca
+.
+
+Year 2: Core civil engineering topics: Applied Math 307, ENGG 319 (Stats), ENGG 311 (Thermo), ENGG 325 (Circuits), ENGG 317 (Solid Mechanics), ENGG 349 (Dynamics), ENGG 407 (Numerical Methods), MECH 341 (Fluid Mechanics I), plus one complementary studies (0.5)
+ucalgary.ca
+ucalgary.ca
+. These courses cover mechanics of materials, fluids, structures basics and analysis tools.
+
+Year 3: Eight core courses plus three half-courses of complementaries. Core courses typically are CIVL 413 (Materials), CIVL 423 (Soil Mechanics), CIVL 451 (Structural Design I), CIVL 461 (Mech of Mat’ls), CIVL 471 (Proj Management), CIVL 473 (Transportation Planning), CIVL 481 (Environmental Engr), Geology 471 (Geol/Environment), and ENGG 513 (Prof. Engineer in Society)
+ucalgary.ca
+ucalgary.ca
+. (All 8 above, plus ENGG 513 and 2-3 half-courses of humanities/social-science each semester.) Some specializations add an extra core course: e.g. the Environmental/EE specialization adds Energy Mgmt 301. A Biomedical specialization would replace some complementaries with a BME elective
+ucalgary.ca
+ucalgary.ca
+.
+
+Year 4: Two-term group design project (CIVL 570, 2 half-courses) plus eight half-courses of technical electives
+ucalgary.ca
+. In the regular program, students choose eight half-courses from approved CIVL electives lists (e.g. structural, geotech, transportation courses). They also take any remaining complementaries. (For example, “CIVL 570 Group Design Project 1–2” in Fall/Winter, then 3–10: any 8 technical electives
+ucalgary.ca
+.) Specializations/minors in civil define how many electives are drawn from certain groups (e.g. a Structural minor requires 7 courses from structural electives)
+ucalgary.ca
+ucalgary.ca
+.
+
+Requirements structure: The degree is 44–46 half-courses
+ucalgary.ca
+. Each year has core courses and some flexibility for electives. 2nd year has 1 comp. studies, 3rd year has 3 comp. studies (or fewer if minor-specialization frees slots), 4th year uses most slots for technical electives
+ucalgary.ca
+. Complementary (HSS) courses must satisfy Engineering’s breadth rules (incl. technical writing, economics, etc.).
+
+Special prerequisites: Many civil courses build on earlier ones (e.g. CIVL 413 requires solid mechanics, CIVL 461 requires structural design I, etc.). Students interested in the professional internship should note work-term eligibility (12–16 months of engineering internship after 3rd year is common
+ucalgary.ca
+).
+
+Bachelor of Science in Electrical Engineering
+
+Program name: Bachelor of Science in Electrical Engineering
+ucalgary.ca
+.
+
+Year 1: Common core (Math 275/277/211, ENGG 200/204, ENGG 225, ENDG 233, Physics 259, etc.)
+ucalgary.ca
+schulich.ucalgary.ca
+.
+
+Year 2: Core ECE topics: Applied Math 307, Computer Eng 339 (Programming), Computer Eng 369 (Computer Org), ELE 327 (Signals & Transforms), ELE 343 (Circuits II), ELE 353 (Digital Circuits), ELE 361 (Devices & Materials), plus 1.0 course complementary (two half-courses) and Physics 369
+ucalgary.ca
+. These cover programming, circuits, digital logic, electronics fundamentals, and required math/physics.
+
+Year 3: Seven core courses plus the remainder of complementaries. Typical 3rd-year courses include ENGG 407 (Numerical Methods), ELE 441 (Control Systems I), ELE 453 (Digital Systems Design), COMP 467 (Digital Electronics), ELE 469 (Analog Electronics), ELE 471 (Comm. Systems), ELE 475 (EM Fields I), ELE 476 (EM Waves)
+ucalgary.ca
+ucalgary.ca
+. (That’s 1–8 above, plus up to 3 half-courses of humanities/technical writing.) These courses cover control theory, advanced circuits, communications, electromagnetics, and digital design.
+
+Year 4: Capstone and electives. Students take two senior design project courses (ELE 583 & 589 in fall/winter
+ucalgary.ca
+), ENGG 513 (Professional Practice), and seven technical electives (3.5 courses) plus 0.5 complementary
+ucalgary.ca
+. Technical electives can include 400/500‑level EE/CompE/CompSci courses (a list of approved electives is given in the calendar). (A capstone block workshop also is taken.)
+
+Requirements structure: Total 44–46 half-courses
+ucalgary.ca
+. In 3rd year there are no technical electives – all slots filled with core courses (and complementaries)
+ucalgary.ca
+. In 4th year, all but one slot are electives: 7 half-course electives plus one complementary
+ucalgary.ca
+.
+
+Special prerequisites: 2nd-year prerequisites (e.g. ELE 343 requires ENGg 202/225; ELE 361 requires Math/MATH 211 etc). The degree mandates programming, circuits, and math sequences (Math 375 or AM 307 in 4th year
+ucalgary.ca
+). For the BME specialization, some 2nd/3rd year courses are replaced with Biomedical courses (e.g. BIOE 301,309) as noted in [69†L111-L118].
+
+Bachelor of Science in Engineering Physics
+
+Program name: Bachelor of Science in Engineering Physics.
+
+Year 1: Core first-year (Math 275,277,211; ENGG 200,204; ENGG 225; ENDG 233; ENGG 202 (Stat­ics); ENGG 212 (Thermo); Physics 259; plus complementary studies)
+schulich.ucalgary.ca
+. These build the math/engineering foundation.
+
+Year 2: A blend of physics and engineering. For example, courses may include PHEN 381/383 (Continuum Mechanics I & II), Math 375 (Calc III), ENPH 301 (Eng Physics Research/Design I), ENGG 349 (Dynamics), ENPH 388 (Circuits/Sys I), ENCM 335 (Programming for EE), PHYS 229 (Modern Physics), ENDG 319 (Prob/Stats for EE)
+schulich.ucalgary.ca
+. (Plus complementary courses.) These cover mechanics of materials, advanced math, circuits, and modern physics.
+
+Year 3: Specialized engineering physics courses. Example schedule includes ENPH 488 (Circuits/Sys II), ENPH 491 (Electromech. Design), PHEN 435 (Math Methods for Physicists), ENPH 401 (Design for Eng Phys II), PHYS 449 (Stat Mech/Thermo), PHYS 443 (Quantum I), ENEL 475 (EM Fields I), plus either a MECH or an ELE technical elective* (e.g. MECH 485/479/495 or ELE 469/471/476), and one additional physics elective
+schulich.ucalgary.ca
+. (Plus complementaries.)
+
+Year 4: Capstone/project and electives. Typically ENGG 501–502 (Senior Capstone I–II), PHYS 375 (Optics/Waves) and PHEN 501 (Research Project). Students then take ~2 technical electives and ~1 physics elective (as listed by the program)
+schulich.ucalgary.ca
+. Remaining complementaries finish the program (total ~44–46 half-courses).
+
+Requirements structure: The program interleaves physics and engineering. Years 1–3 as above follow a fixed sequence; Year 4 includes a group design project (ENGG 501/502) and open electives. Technical electives must be engineering or physics 400/500‑level courses. Complementary studies courses must fulfill Engineering’s breadth (technical communication, ethics, etc
+schulich.ucalgary.ca
+).
+
+Notes: Specialized prerequisites apply (e.g. ENPH 401 requires ENPH 301; PHYS 443 requires PHYS 229). The program targets advanced fields (quantum, nanotech, etc.)
+schulich.ucalgary.ca
+.
+
+Bachelor of Science in Geomatics Engineering
+
+Program name: Bachelor of Science in Geomatics Engineering.
+
+Year 1: Common engineering core (as above).
+
+Year 2: Core geomatics courses (surveying, mapping, GPS), math, and basic circuits/stats. (For example, Applied Math 307, Geomatics courses in mapping/survey, ENGG 319, ENGG 325, etc.)
+
+Year 3: Core geomatics topics (remote sensing, GIS, land dev., etc.), plus capstone and ethics.
+
+Year 4: Capstone design project (2.0 credits) and technical electives (field-specific courses like geodesy, imaging), plus complementary courses.
+
+Requirements structure: Geomatics is 44–46 courses with required courses each year; details are analogous to other majors (core courses + electives). Technical electives cover advanced geomatics subjects. (Exact course listings are specified in the UCalgary Calendar for Geomatics Eng.)
+
+(Detailed course lists for Geomatics and Energy Eng were not found in open sources, but they follow the pattern: common first year, then specialized courses each year with technical and complementary electives.)
+
+Bachelor of Science in Mechanical Engineering
+
+Program name: Bachelor of Science in Mechanical Engineering
+ucalgary.ca
+.
+
+Year 1: Common engineering core (Math 275/277/211; ENGG 200/204/225; ENDG 233; Physics 259; etc.)
+ucalgary.ca
+schulich.ucalgary.ca
+.
+
+Year 2: Core mechanical subjects such as ENGG 311 (Thermodynamics), ENGG 317 (Solid Mech), ENGG 325 (Circuits), ENGG 349 (Dynamics), MFE 417 (Manufacturing Processes), plus Chemical 379 (Chemistry for Engineers)
+ucalgary.ca
+.
+
+Year 3: Advanced MECH courses – e.g. MECH 317 (Solid Mechanics II), MECH 337 (Heat Transfer), MECH 339 (Fluid Mechanics II), MECH 341 (Fluid Mechanics I), MECH 421 (Heat & Mass Transfer), MECH 461 (Machine Design), MECH 471 (ME Engr Analysis), MECH 473 (Vibrations), MECH 479/485 (optional design electives), MECH 485 (Eng Practice), MECH 493 (Thermo II), MECH 495 (Systems)+ etc
+ucalgary.ca
+. (Also two sequences of Engineering Professional Practice (ENGG 501/502 or MATH/ENGG equivalent) for ethics/teamwork.) Plus complementaries.
+
+Year 4: Capstone project (often offered via MECH 599) and electives. Students typically take MECH 585 (or MECH 599 project), technical electives in advanced ME topics, and final complementaries
+ucalgary.ca
+. The curriculum requires 12 units of MECH tech electives (four 0.5 courses)
+ucalgary.ca
+.
+
+Requirements structure: Required courses include core MECH courses listed above
+ucalgary.ca
+, 6 units from a choice of two Engg Prof Practice sequences (ENGG 501/502 or MATH/ENGG alternate)
+ucalgary.ca
+, plus Math/Physics electives. Electives: 12 units of MECH or related engineering courses
+ucalgary.ca
+. Complementaries cover communication, humanities, and economics as per School rules.
+
+Special notes: Some majors/minors modify requirements: e.g. an Aerospace Eng minor adds AERO 410/411 and removes some ME courses
+ucalgary.ca
+. A Biomedical Eng minor adds BIOE 301/309/401/415 and reduces ME electives
+ucalgary.ca
+. A Digital Eng minor adds DE310/311/410/411/510/511 and reduces ME electives
+ucalgary.ca
+. An Energy & Environment minor adds EENG 355/377, ENRM 301, and electives
+ucalgary.ca
+. A Mechatronics minor (see below) adds electronics and controls courses.
+
+Bachelor of Science in Oil & Gas Engineering (Petroleum)
+
+Program name: Bachelor of Science in Oil & Gas Engineering (often called Petroleum Engineering).
+
+Year 1: Common engineering core (Math 275/277/211; ENGG 200/204/225; ENDG 233; Physics 259; etc.)
+ucalgary.ca
+schulich.ucalgary.ca
+.
+
+Year 2: A mix of chemical and petroleum topics: Applied Math 307, Chem 357 (Industrial Organic), CHEE 315 (Process Calc), CHEE 331 (Fluid Dyn), ENGG 319 (Stats), ENGG 325 (Circuits), ENGG 311 (Thermo), ENGG 317 (Solid Mech), ENGG 349 (Dynamics), PETR 313 (Flow in Porous Media), Geology 377 (Petroleum Geology), plus 1 comp. study
+ucalgary.ca
+.
+
+Year 3: Combines core chemical engineering courses with petroleum electives. Required courses include CHEE 401 (Process Analysis), CHEE 403 (Heat Transfer), CHEE 405 (Sep I), CHEE 427 (Thermo), ENGG 407 (Numerical Methods), plus major petroleum courses PETR 423 (Process Dev), PETR 507 (Well Logging), PETR 515 (Drilling & Completions), PETR 429 (Reservoir Eng), PETR 533 (Production Eng)
+ucalgary.ca
+. (Also 2 half-courses of complementary studies.)
+
+Year 4: Advanced petroleum design: CHEE 501 (Transport Phenomena), ENGG 513 (Ethics), PETR 505 (Separation Processes), PETR 511 (Design I), PETR 525 (Waterflood/EOR), PETR 531 (Design II), PETR 551 (Lab), PETR 509 (Well Testing)
+ucalgary.ca
+. Plus two technical electives (1.0 course) and one complementary (0.5). Electives can include advanced CE or EM courses (see electives list in calendar).
+
+Requirements structure: Total ~44–46 half-courses
+ucalgary.ca
+. 2nd/3rd year mix chemical and petroleum courses. Technical electives (2 in 4th year) allow specialization in aspects like reservoir simulation or drilling. In 3rd year, 2 half-courses complementaries are required
+ucalgary.ca
+.
+
+Notes: Students must have both CHE and PETR core courses. For example, 2nd-year PETR 313/Geol 377 are prerequisites for 3rd-year PETR courses. This program is designed to follow a chemical engineering background, with additional geology and reservoir topics unique to oil & gas.
+
+Bachelor of Science in Software Engineering
+
+Program name: Bachelor of Science in Software Engineering
+ucalgary.ca
+.
+
+Year 1: Common engineering core (Math 275/277/211; ENGG 200/204/225; ENDG 233; Physics 259; etc.)
+ucalgary.ca
+schulich.ucalgary.ca
+.
+
+Year 2: Core SE courses: Digital Eng 319 (Data Structures), plus Software Eng for Engineers 300 (Intro to SE) and courses SE 337/338/380/381 (Programming, Systems, Software Life Cycle), Electrical Eng 353 (Digital Circuits), ELE 500 (Logic Design), Comp Eng 369 (Computer Org), SE 401 (Software Architecture), SE 438 (Software Testing)
+ucalgary.ca
+. Also requires Math/Physics electives (Math 375 or AM 307; Physics 365 or 369)
+ucalgary.ca
+. (Also first-year courses.)
+
+Year 3: Advanced software design courses: SE 511 (Software Quality), SE 533 (Software Project Management), etc., plus technical electives (e.g. AI, security). Students complete 12 units of SE technical electives (four 0.5 courses)
+ucalgary.ca
+. Complementary studies are also required.
+
+Year 4: Capstone project (often under 4th‑year design blocks) and remaining electives. The program uses 12 SE electives in total
+ucalgary.ca
+, so 3 in upper years (total 12 units).
+
+Requirements structure: 44–46 courses
+ucalgary.ca
+. The curriculum lists about 15 specific required courses (including first-year, core SE and supporting CS/EE courses)
+ucalgary.ca
+. Students must take all these core courses plus general electives. SE electives can be chosen from approved CS, CE, and EE courses (see the SE electives list).
+
+Special rules: SE is accredited and follows strict prerequisites (e.g., SE 401 requires prior programming and math). Antirequisites: SE courses often have cross-listings (e.g. credit not allowed for SE 401 if taken SE 443). Students may also opt for combined degrees (e.g. SE/BComm, which waive some electives)
+ucalgary.ca
+.
+
+Bachelor of Science in Sustainable Systems Engineering
+
+Program name: Bachelor of Science in Sustainable Systems Engineering
+schulich.ucalgary.ca
+.
+
+Year 1: Common first-year core (10 courses: Math 275/277/211; ENGG 200/202/204/225; ENDG 233; Physics 259; plus communications and design)
+ucalgary.ca
+schulich.ucalgary.ca
+. These cover calculus, physics, programming, materials, and introductory design.
+
+Year 2–3: Interdisciplinary technical courses. The program integrates topics from civil, mechanical, electrical, chemical and software engineering along with science and environment subjects
+schulich.ucalgary.ca
+. Students take courses in e.g. energy systems, water resources, thermodynamics, solid and fluid mechanics, environmental science, GIS, and sustainable design. A design “backbone” runs through all years. (Exact course list is given in the calendar; examples include energy, fluids, materials, economics for sustainable engineering.)
+
+Year 4: Capstone design project and electives. The final year typically includes a group design project focusing on a sustainability challenge, plus advanced electives (e.g. renewable energy, lifecycle analysis, sustainable construction).
+
+Requirements structure: The SSE degree is ~44–46 courses. It has a rigid core of both engineering and sustainability courses. Students must complete core courses from multiple disciplines (as noted above) and also take complementary studies. For example, each year includes 1–2 humanities courses and technical writing. The program emphasizes systems-level thinking.
+
+Special notes: Students receive guaranteed placement into SSE after first year if they complete all 10 core first-year courses
+schulich.ucalgary.ca
+. The emphasis is on multidisciplinary integration
+schulich.ucalgary.ca
+. SSE students also do an internship after 3rd year (common option).
+
+Bachelor of Science in Energy Engineering (Diploma + Degree)
+
+Program name: Bachelor of Science in Engineering: Energy Engineering (Diploma transfer). This is a 2-year BSc program for students holding a 2-year polytechnic Engineering Technology diploma.
+
+Program structure: Students complete a special energy-focused engineering diploma (CTEC or similar) at a polytechnic, then enter UCalgary for a 2-year BSc in Energy Engineering. The BSc requires all second-year and above courses (year 3–4) in the Energy Engineering curriculum.
+
+Courses: Core courses include advanced energy topics (thermodynamics, heat transfer, energy management, control systems), often sharing with Mechanical/Chemical/Electrical programs. Specific courses typically include MECH/CHEM/ENGG courses on energy systems, plus ENPH (Engineering Physics) project courses in energy and environment.
+
+Requirements structure: Students must satisfy all requirements of the regular Energy & Environment specialization (see next). They also complete remaining technical electives and complementary studies.
+
+Notes: Admission requires an appropriate diploma. The program has no design workterm break (completed in 4 semesters) and includes all upper-year engineering courses 
+ucalgary.ca
+.
+
+Undergraduate Minors (recommended for engineers)
+Minor in Aerospace Engineering
+
+Offered to: Students in Electrical, Geomatics, Mechanical or Software Eng (admission in 2nd year)
+schulich.ucalgary.ca
+.
+
+Courses: Core aerospace courses in design and avionics. For example, the Aerospace Eng minor requires AERO 410 (Propulsion), AERO 411 (Flight Vehicles), ELE 301 (Programming), ENGG 501/502 (Professional Practice sequence), and GEOM 333 (GPS/GNSS)
+ucalgary.ca
+. Students also complete 9 units (4.5 half-courses) of Aerospace technical electives (advanced courses such as flight dynamics, control of aerospace systems)
+ucalgary.ca
+.
+
+Structure: Total ~5.0 courses (~30 units). Must complete all listed minor courses; these replace some requirements of the home major (e.g. Chemistry 379 is waived)
+ucalgary.ca
+. Electives must be 300+ level aerospace courses.
+
+Details: As noted, an Aero minor adds specialty courses from the Aerospace program to the student’s transcript. It deepens knowledge of aircraft systems, avionics, and unmanned vehicles
+schulich.ucalgary.ca
+.
+
+Minor in Biomedical Engineering
+
+Offered to: Students in Chemical, Civil, Electrical, Geomatics, Mechanical or Software Eng (entry in 2nd year)
+schulich.ucalgary.ca
+.
+
+Courses: Core BME courses. Typically requires BIOE 301 (Intro to BME), BIOE 309 (Anatomy & Physiology), BIOE 401 (Analyses of Bioengineering Processes), BIOE 415 (BME signals), plus a set of BME technical electives (total 9–12 units)
+ucalgary.ca
+.
+
+Structure: Total ~4.0–5.0 courses (~24–30 units). If pursuing a BME minor, students remove some of their home major’s electives (e.g. Chemistry 379 for ME is waived)
+ucalgary.ca
+ and add the above courses. Electives are chosen from BME offerings (imaging, biomaterials, etc.).
+
+Details: This minor lets engineers apply engineering to medical/biological problems
+schulich.ucalgary.ca
+. It includes biomechanics, biomaterials, imaging, and tissue engineering concepts.
+
+Minor in Digital Engineering
+
+Offered to: Any engineering major except Software Eng (entry in 2nd year)
+schulich.ucalgary.ca
+.
+
+Courses: Core DE courses: DE 310/311 (Software Process & Architecture), DE 410/411 (Advanced Algorithms/System Design), DE 510/511 (Systems and IoT), plus 3 units of DE technical electives
+ucalgary.ca
+. (Students also keep any first-year requirements.)
+
+Structure: About 5 courses (~30 units). The minor adds DE courses and removes some home-major electives (e.g. 3 elective units of MECH are waived)
+ucalgary.ca
+.
+
+Details: Focuses on coding, AI/machine-learning, Internet of Things and system integration
+schulich.ucalgary.ca
+. It broadens an engineer’s software/development skills.
+
+Minor in Energy and Environment Engineering
+
+Offered to: Students in any engineering major (admission in 2nd year).
+
+Courses: Core E&E courses: EENG 355 (Energy & Environment Fundamentals) and EENG 377 (Energy Systems), Energy Mgmt 301 (Policies & Markets), Sci 529 (Sustainable Communities), plus energy technical electives. Elective options include energy system analysis, renewable energy, etc. (Total minor = 30 units)
+ucalgary.ca
+.
+
+Structure: Students may choose either 6 units of E&E tech electives + 3 units home electives, or 9 units of E&E electives
+ucalgary.ca
+. Some courses of the major (e.g. a complementary or an elective) may be waived.
+
+Details: Teaches sustainable energy technologies and policy. For example, third-year EENG 311 (Thermo of Energy Systems) is often part of requirements, as is EENG 355/377. Students learn energy conversion, efficiency, and regulation
+ucalgary.ca
+.
+
+Minor in Mechatronics Engineering
+
+Offered to: Students in any engineering major (entry in 2nd year).
+
+Courses: Combines mechanical and electrical courses. Requires ELE 301 (Programming I), ELE 327 (Signals & Systems I), GEOM 333 (Spatial Data), MECH 501/502/561/562 (Controls I/II, Kinematics)
+ucalgary.ca
+, plus 6 units of Mechatronics electives (robotics, embedded systems, etc.).
+
+Structure: ~5.0 courses (30 units). Minor courses replace some of the host major’s electives (e.g. Math/ENGG 501/502 may be waived)
+ucalgary.ca
+.
+
+Details: Covers sensors, actuators, control of electro-mechanical systems. Leads to skills in robotics and automation.
+
+Minor in Entrepreneurship and Enterprise Development (MEED)
+
+Offered to: All engineering majors (entry in 2nd year)
+schulich.ucalgary.ca
+.
+
+Courses: Five courses in entrepreneurship, innovation and business: e.g. “Introduction to Business Venturing,” “Principles of Entrepreneurship,” “Opportunity Identification,” “New Venture Start-up,” and one elective (usually from a set of business courses)
+schulich.ucalgary.ca
+. Exact titles vary by calendar year.
+
+Structure: Total 5.0 courses (30 units). These courses are jointly offered by Schulich Engineering and Haskayne Business. They do not replace technical courses; students take them in addition to their engineering requirements.
+
+Details: Teaches how to start/manage tech ventures. It is an “engineering + business” skillset minor
+schulich.ucalgary.ca
+. (An alternate path is the 5‑year combined BE + BComm degree.)
