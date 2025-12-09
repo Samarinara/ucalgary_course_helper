@@ -19,11 +19,13 @@ import CourseSelectionPanel from "../components/CourseSelectionPanel";
 import RequirementsDashboard from "../components/RequirementsDashboard";
 import HelpMenu from "../components/HelpMenu";
 import AboutMenu from "../components/AboutMenu";
+import { useTheme } from "../hooks/useTheme";
 import {
 	loadCourseProgress,
 	saveCourseProgress,
 	calculateStudentProgress,
 } from "../utils/progressStorage";
+import "../styles/theme.css";
 
 const CourseGraph = dynamic(() => import("../components/CourseGraph"), {
 	ssr: false,
@@ -47,6 +49,7 @@ export default function Home() {
 		"overview" | "requirements" | "selection"
 	>("overview");
 	const [focusedCourseId, setFocusedCourseId] = useState<string | null>(null);
+	const { theme, toggleTheme } = useTheme();
 
 	// Load course progress from local storage on mount
 	useEffect(() => {
@@ -213,11 +216,10 @@ export default function Home() {
 						<button
 							key={tab.id}
 							onClick={() => setActiveTab(tab.id as any)}
-							className={`flex-1 px-3 py-2 text-sm font-medium rounded-md transition-colors ${
-								activeTab === tab.id
+							className={`flex-1 px-3 py-2 text-sm font-medium rounded-md transition-colors ${activeTab === tab.id
 									? "bg-white text-slate-900 shadow-sm"
 									: "text-slate-600 hover:text-slate-900"
-							}`}
+								}`}
 						>
 							{tab.label}
 						</button>
@@ -253,6 +255,8 @@ export default function Home() {
 								setFocusedCourseId(courseId);
 								setActiveTab("overview");
 							}}
+							onCourseStatusChange={handleCourseStatusChange}
+							courseProgress={courseProgress}
 						/>
 					)}
 

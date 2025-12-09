@@ -1,5 +1,10 @@
 import React, { useState } from "react";
-import type { Major, Minor, StudentProgress } from "../data/types";
+import type {
+	Major,
+	Minor,
+	StudentProgress,
+	CourseProgress,
+} from "../data/types";
 import { ALL_COURSES } from "../data/courses";
 import RequirementSection from "./RequirementSection";
 import SectionPopup from "./SectionPopup";
@@ -9,6 +14,11 @@ interface RequirementsDashboardProps {
 	minor?: Minor;
 	progress: StudentProgress;
 	onCourseClick?: (courseId: string) => void;
+	onCourseStatusChange?: (
+		courseId: string,
+		status: CourseProgress["status"],
+	) => void;
+	courseProgress?: Map<string, CourseProgress>;
 }
 
 const CourseRequirementRow: React.FC<{
@@ -130,6 +140,8 @@ const RequirementsDashboard: React.FC<RequirementsDashboardProps> = ({
 	minor,
 	progress,
 	onCourseClick,
+	onCourseStatusChange,
+	courseProgress = new Map(),
 }) => {
 	const [selectedSection, setSelectedSection] = useState<{
 		type: "major" | "minor";
@@ -197,12 +209,14 @@ const RequirementsDashboard: React.FC<RequirementsDashboardProps> = ({
 			</div>
 
 			{/* Section Popup */}
-			{selectedSection && (
+			{selectedSection && onCourseStatusChange && (
 				<SectionPopup
 					isOpen={true}
 					onClose={closeSectionPopup}
 					title={selectedSection.title}
 					progress={selectedSection.progress}
+					onCourseStatusChange={onCourseStatusChange}
+					courseProgress={courseProgress}
 				/>
 			)}
 		</>

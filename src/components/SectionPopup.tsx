@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import type { RequirementProgress } from "../data/types";
+import type { RequirementProgress, CourseProgress } from "../data/types";
 import { ALL_COURSES } from "../data/courses";
 
 interface SectionPopupProps {
@@ -7,6 +7,11 @@ interface SectionPopupProps {
 	onClose: () => void;
 	title: string;
 	progress: RequirementProgress;
+	onCourseStatusChange: (
+		courseId: string,
+		status: CourseProgress["status"],
+	) => void;
+	courseProgress: Map<string, CourseProgress>;
 }
 
 const SectionPopup: React.FC<SectionPopupProps> = ({
@@ -14,6 +19,8 @@ const SectionPopup: React.FC<SectionPopupProps> = ({
 	onClose,
 	title,
 	progress,
+	onCourseStatusChange,
+	courseProgress,
 }) => {
 	if (!isOpen) return null;
 
@@ -32,6 +39,36 @@ const SectionPopup: React.FC<SectionPopupProps> = ({
 		(sum, group) => sum + group.completedValue,
 		0,
 	);
+
+	// Status button component
+	const StatusButton: React.FC<{
+		status: CourseProgress["status"];
+		label: string;
+		color: string;
+		isActive: boolean;
+		courseId: string;
+	}> = ({ status, label, color, isActive, courseId }) => (
+		<button
+			onClick={() => onCourseStatusChange(courseId, status)}
+			className={`px-2 py-1 rounded text-xs font-medium transition-all ${
+				isActive
+					? `${color} text-white shadow-md`
+					: "bg-slate-100 text-slate-600 hover:bg-slate-200"
+			}`}
+		>
+			{label}
+		</button>
+	);
+
+	const statusConfig = [
+		{ status: "planned" as const, label: "Planned", color: "bg-blue-500" },
+		{
+			status: "in_progress" as const,
+			label: "In Progress",
+			color: "bg-yellow-500",
+		},
+		{ status: "completed" as const, label: "Completed", color: "bg-green-500" },
+	];
 
 	return (
 		<>
@@ -143,6 +180,10 @@ const SectionPopup: React.FC<SectionPopupProps> = ({
 												<div className="grid grid-cols-1 md:grid-cols-2 gap-2">
 													{group.courses.required.map((courseId) => {
 														const course = ALL_COURSES[courseId];
+														const currentProgress =
+															courseProgress.get(courseId);
+														const currentStatus =
+															currentProgress?.status || "planned";
 														const isCompleted =
 															group.courses.completed.includes(courseId);
 														const isInProgress =
@@ -159,7 +200,7 @@ const SectionPopup: React.FC<SectionPopupProps> = ({
 																			: "bg-slate-50 border-slate-200 text-slate-600"
 																}`}
 															>
-																<div className="flex items-center justify-between">
+																<div className="flex items-center justify-between mb-2">
 																	<span className="font-medium">
 																		{courseId}
 																	</span>
@@ -167,8 +208,22 @@ const SectionPopup: React.FC<SectionPopupProps> = ({
 																		{course?.units || 0} units
 																	</span>
 																</div>
-																<div className="text-xs text-slate-500 mt-1">
+																<div className="text-xs text-slate-500 mb-2">
 																	{course?.name || course?.label}
+																</div>
+																<div className="flex gap-1">
+																	{statusConfig.map(
+																		({ status, label, color }) => (
+																			<StatusButton
+																				key={status}
+																				status={status}
+																				label={label}
+																				color={color}
+																				isActive={currentStatus === status}
+																				courseId={courseId}
+																			/>
+																		),
+																	)}
 																</div>
 															</div>
 														);

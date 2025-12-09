@@ -1,4 +1,17 @@
 import React, { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import {
+	HelpCircle,
+	X,
+	MousePointerClick,
+	ZoomIn,
+	CheckCircle2,
+	Circle,
+	Ban,
+	Layers,
+	Settings,
+	Lightbulb,
+} from "lucide-react";
 
 interface HelpMenuProps {
 	className?: string;
@@ -13,256 +26,178 @@ const HelpMenu: React.FC<HelpMenuProps> = ({ className = "" }) => {
 	return (
 		<>
 			{/* Help Button */}
-			<button
+			<motion.button
+				whileHover={{ scale: 1.05 }}
+				whileTap={{ scale: 0.95 }}
 				onClick={openModal}
-				className={`px-3 py-1 text-sm font-medium rounded-full transition-all duration-200 hover:scale-105 active:scale-95 ${className}`}
+				className={`flex items-center gap-2 px-4 py-2 text-sm font-semibold rounded-full shadow-md transition-colors ${className}`}
 				style={{
 					backgroundColor: "#FCCA00",
 					color: "#1f2937",
-					boxShadow: "0 2px 4px rgba(252, 202, 0, 0.3)",
 				}}
 			>
-				❓ Help
-			</button>
+				<HelpCircle size={18} />
+				<span>Help</span>
+			</motion.button>
 
 			{/* Modal Overlay */}
-			{isOpen && (
-				<div
-					className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4"
-					onClick={closeModal}
-				>
-					{/* Modal Content */}
-					<div
-						className="bg-white rounded-xl shadow-2xl max-w-2xl w-full max-h-[80vh] overflow-y-auto"
-						onClick={(e) => e.stopPropagation()}
+			<AnimatePresence>
+				{isOpen && (
+					<motion.div
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 1 }}
+						exit={{ opacity: 0 }}
+						className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-4"
+						onClick={closeModal}
 					>
-						{/* Header */}
-						<div className="sticky top-0 bg-white border-b border-slate-200 p-6">
-							<div className="flex items-center justify-between">
-								<h2 className="text-2xl font-bold text-slate-800">
-									🎓 Course Planner Guide
-								</h2>
+						{/* Modal Content */}
+						<motion.div
+							initial={{ scale: 0.9, opacity: 0, y: 20 }}
+							animate={{ scale: 1, opacity: 1, y: 0 }}
+							exit={{ scale: 0.9, opacity: 0, y: 20 }}
+							transition={{ type: "spring", damping: 25, stiffness: 300 }}
+							className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[85vh] overflow-hidden flex flex-col"
+							onClick={(e) => e.stopPropagation()}
+						>
+							{/* Header */}
+							<div className="flex items-center justify-between p-6 border-b border-slate-100 bg-slate-50/50">
+								<div className="flex items-center gap-3">
+									<div className="p-2 bg-yellow-100 rounded-lg text-yellow-600">
+										<HelpCircle size={24} />
+									</div>
+									<h2 className="text-xl font-bold text-slate-800">
+										Course Planner Guide
+									</h2>
+								</div>
 								<button
 									onClick={closeModal}
-									className="text-slate-400 hover:text-slate-600 text-2xl leading-none"
+									className="p-2 text-slate-400 hover:text-slate-600 hover:bg-slate-100 rounded-full transition-colors"
 								>
-									×
+									<X size={20} />
 								</button>
 							</div>
-						</div>
 
-						{/* Content */}
-						<div className="p-6 space-y-6">
-							{/* Course Selection */}
-							<section>
-								<h3 className="text-lg font-semibold text-slate-800 mb-3 flex items-center">
-									<span
-										className="w-8 h-8 rounded-full flex items-center justify-center mr-3 text-white text-sm"
-										style={{ backgroundColor: "#CF0722" }}
-									>
-										1
-									</span>
-									Selecting Courses
-								</h3>
-								<div className="ml-11 space-y-2 text-slate-600">
-									<p>
-										• <strong>Left-click</strong> any course node to select it
-										and view details
-									</p>
-									<p>
-										• <strong>Right-click</strong> any course to toggle
-										completion status
-									</p>
-									<p>
-										• <strong>Click courses in Requirements tab</strong> to zoom
-										into them on the graph
-									</p>
-									<p>
-										• Use mouse wheel to zoom in/out and drag to pan around the
-										graph
-									</p>
-								</div>
-							</section>
-
-							{/* Course Status Colors */}
-							<section>
-								<h3 className="text-lg font-semibold text-slate-800 mb-3 flex items-center">
-									<span
-										className="w-8 h-8 rounded-full flex items-center justify-center mr-3 text-white text-sm"
-										style={{ backgroundColor: "#CF0722" }}
-									>
-										2
-									</span>
-									Course Status Colors
-								</h3>
-								<div className="ml-11 space-y-2">
-									<div className="flex items-center">
-										<div
-											className="w-6 h-6 rounded mr-3"
-											style={{ backgroundColor: "#CF0722", opacity: 0.85 }}
-										></div>
-										<span className="text-slate-600">
-											<strong>Required:</strong> Courses you must take for your
-											program
-										</span>
+							{/* Content */}
+							<div className="p-6 overflow-y-auto space-y-8 custom-scrollbar">
+								{/* Course Selection */}
+								<section>
+									<h3 className="text-sm font-bold text-slate-900 uppercase tracking-wider mb-4 flex items-center gap-2">
+										<MousePointerClick size={16} className="text-red-600" />
+										Interactions
+									</h3>
+									<div className="grid gap-3 text-slate-600 text-sm">
+										<div className="flex items-start gap-3 p-3 rounded-lg bg-slate-50 border border-slate-100">
+											<div className="mt-0.5 font-bold text-slate-900">
+												Left Click
+											</div>
+											<div>Select a course to view details and prerequisites</div>
+										</div>
+										<div className="flex items-start gap-3 p-3 rounded-lg bg-slate-50 border border-slate-100">
+											<div className="mt-0.5 font-bold text-slate-900">
+												Right Click
+											</div>
+											<div>Toggle course completion status</div>
+										</div>
+										<div className="flex items-start gap-3 p-3 rounded-lg bg-slate-50 border border-slate-100">
+											<div className="mt-0.5 font-bold text-slate-900">
+												Zoom/Pan
+											</div>
+											<div>Use mouse wheel to zoom, drag to move around</div>
+										</div>
 									</div>
-									<div className="flex items-center">
-										<div
-											className="w-6 h-6 rounded mr-3"
-											style={{ backgroundColor: "#FCCA00", opacity: 0.85 }}
-										></div>
-										<span className="text-slate-600">
-											<strong>In Progress:</strong> Courses you're currently
-											taking
-										</span>
+								</section>
+
+								{/* Course Status Colors */}
+								<section>
+									<h3 className="text-sm font-bold text-slate-900 uppercase tracking-wider mb-4 flex items-center gap-2">
+										<Layers size={16} className="text-red-600" />
+										Status Legend
+									</h3>
+									<div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+										<div className="flex items-center gap-3 p-3 rounded-lg border border-slate-100 bg-white">
+											<div className="w-4 h-4 rounded-full bg-[#CF0722]" />
+											<span className="text-sm font-medium text-slate-700">
+												Required
+											</span>
+										</div>
+										<div className="flex items-center gap-3 p-3 rounded-lg border border-slate-100 bg-white">
+											<div className="w-4 h-4 rounded-full bg-[#FCCA00]" />
+											<span className="text-sm font-medium text-slate-700">
+												In Progress
+											</span>
+										</div>
+										<div className="flex items-center gap-3 p-3 rounded-lg border border-slate-100 bg-white">
+											<div className="w-4 h-4 rounded-full bg-blue-500" />
+											<span className="text-sm font-medium text-slate-700">
+												Completed
+											</span>
+										</div>
+										<div className="flex items-center gap-3 p-3 rounded-lg border border-slate-100 bg-white">
+											<div className="w-4 h-4 rounded-full bg-slate-400" />
+											<span className="text-sm font-medium text-slate-700">
+												Locked
+											</span>
+										</div>
 									</div>
-									<div className="flex items-center">
-										<div
-											className="w-6 h-6 rounded mr-3 bg-blue-500"
-											style={{ opacity: 0.85 }}
-										></div>
-										<span className="text-slate-600">
-											<strong>Completed:</strong> Courses you've successfully
-											finished
-										</span>
-									</div>
-									<div className="flex items-center">
-										<div
-											className="w-6 h-6 rounded mr-3 bg-slate-400"
-											style={{ opacity: 0.85 }}
-										></div>
-										<span className="text-slate-600">
-											<strong>Unavailable:</strong> Courses with unmet
-											prerequisites
-										</span>
-									</div>
-								</div>
-							</section>
+								</section>
 
-							{/* Requirement Groups */}
-							<section>
-								<h3 className="text-lg font-semibold text-slate-800 mb-3 flex items-center">
-									<span
-										className="w-8 h-8 rounded-full flex items-center justify-center mr-3 text-white text-sm"
-										style={{ backgroundColor: "#CF0722" }}
-									>
-										3
-									</span>
-									Requirement Groups
-								</h3>
-								<div className="ml-11 space-y-2 text-slate-600">
-									<p>
-										• <strong>Closely packed courses</strong> belong to the same
-										requirement group
-									</p>
-									<p>
-										• These groups represent flexible requirements (e.g.,
-										"Choose 3 of 5 courses")
-									</p>
-									<p>
-										• Large circles encompass groups and show credit
-										requirements
-									</p>
-									<p>• Groups are specific to your selected major</p>
-									<p>
-										• Check the Requirements tab to see detailed progress for
-										each group
-									</p>
-								</div>
-							</section>
+								{/* Features Grid */}
+								<div className="grid md:grid-cols-2 gap-6">
+									{/* Requirement Groups */}
+									<section>
+										<h3 className="text-sm font-bold text-slate-900 uppercase tracking-wider mb-4 flex items-center gap-2">
+											<CheckCircle2 size={16} className="text-red-600" />
+											Requirements
+										</h3>
+										<ul className="space-y-2 text-sm text-slate-600 list-disc list-inside marker:text-slate-300">
+											<li>Grouped nodes share requirements</li>
+											<li>Large circles show credit totals</li>
+											<li>Check "Requirements" tab for details</li>
+										</ul>
+									</section>
 
-							{/* Program Configuration */}
-							<section>
-								<h3 className="text-lg font-semibold text-slate-800 mb-3 flex items-center">
-									<span
-										className="w-8 h-8 rounded-full flex items-center justify-center mr-3 text-white text-sm"
-										style={{ backgroundColor: "#CF0722" }}
-									>
-										4
-									</span>
-									Program Configuration
-								</h3>
-								<div className="ml-11 space-y-2 text-slate-600">
-									<p>
-										• <strong>Major Selection:</strong> Choose your primary
-										engineering discipline
-									</p>
-									<p>
-										• <strong>Minor Selection:</strong> Add a complementary
-										minor (valid combinations only)
-									</p>
-									<p>
-										• <strong>Overview Tab:</strong> See overall progress and
-										credit requirements
-									</p>
-									<p>
-										• <strong>Requirements Tab:</strong> Detailed breakdown of
-										major/minor requirements
-									</p>
-									<p>
-										• <strong>Course Selection Tab:</strong> View and manage
-										individual course status
-									</p>
+									{/* Program Configuration */}
+									<section>
+										<h3 className="text-sm font-bold text-slate-900 uppercase tracking-wider mb-4 flex items-center gap-2">
+											<Settings size={16} className="text-red-600" />
+											Configuration
+										</h3>
+										<ul className="space-y-2 text-sm text-slate-600 list-disc list-inside marker:text-slate-300">
+											<li>Select Major & Minor in sidebar</li>
+											<li>Track credits in "Overview"</li>
+											<li>Manage courses in "Selection"</li>
+										</ul>
+									</section>
 								</div>
-							</section>
 
-							{/* Tips */}
-							<section>
-								<h3 className="text-lg font-semibold text-slate-800 mb-3 flex items-center">
-									<span
-										className="w-8 h-8 rounded-full flex items-center justify-center mr-3 text-white text-sm"
-										style={{ backgroundColor: "#FCCA00", color: "#1f2937" }}
-									>
-										💡
-									</span>
-									Pro Tips
-								</h3>
-								<div className="ml-11 space-y-2 text-slate-600">
-									<p>• Your progress is automatically saved locally</p>
-									<p>
-										• Courses are semi-transparent so you can see prerequisite
-										arrows
-									</p>
-									<p>
-										• Completed courses show a cross pattern for colorblind
-										accessibility
-									</p>
-									<p>• In-progress courses show a dot pattern</p>
-									<p>
-										• Use the Requirements tab to track complex credit-based
-										requirements
-									</p>
-								</div>
-							</section>
-						</div>
+								{/* Pro Tips */}
+								<section className="bg-yellow-50 rounded-xl p-4 border border-yellow-100">
+									<h3 className="text-sm font-bold text-yellow-800 uppercase tracking-wider mb-2 flex items-center gap-2">
+										<Lightbulb size={16} />
+										Pro Tips
+									</h3>
+									<ul className="space-y-1 text-sm text-yellow-700">
+										<li>• Progress is saved automatically to your browser</li>
+										<li>• Completed courses show a cross pattern for accessibility</li>
+									</ul>
+								</section>
+							</div>
 
-						{/* Footer */}
-						<div className="border-t border-slate-200 p-4 bg-slate-50">
-							<div className="flex justify-between items-center">
-								<p className="text-sm text-slate-500">
-									University of Calgary Engineering Course Planner
-								</p>
-								<button
+							{/* Footer */}
+							<div className="p-4 border-t border-slate-100 bg-slate-50/50 flex justify-end">
+								<motion.button
+									whileHover={{ scale: 1.02 }}
+									whileTap={{ scale: 0.98 }}
 									onClick={closeModal}
-									className="px-4 py-2 font-medium rounded-lg transition-colors"
-									style={{
-										backgroundColor: "#CF0722",
-										color: "white",
-									}}
-									onMouseOver={(e) =>
-										(e.currentTarget.style.backgroundColor = "#B5061C")
-									}
-									onMouseOut={(e) =>
-										(e.currentTarget.style.backgroundColor = "#CF0722")
-									}
+									className="px-6 py-2.5 bg-[#CF0722] text-white font-medium rounded-xl shadow-lg shadow-red-900/20 hover:bg-[#b5061c] transition-colors"
 								>
-									Got it!
-								</button>
+									Got it, thanks!
+								</motion.button>
 							</div>
-						</div>
-					</div>
-				</div>
-			)}
+						</motion.div>
+					</motion.div>
+				)}
+			</AnimatePresence>
 		</>
 	);
 };
