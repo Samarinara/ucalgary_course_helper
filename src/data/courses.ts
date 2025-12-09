@@ -10,14 +10,58 @@ import courseDetails from "./courseDetails.json";
 // Helper to get details
 const getDetails = (id: string) => {
     const details = (courseDetails as any)[id];
-    return details
-        ? {
-            name: details.title,
-            description: details.description,
-            units: details.units,
-            // We could parse prerequisitesText here if we wanted to be fancy later
+    if (!details) return {};
+
+    const prerequisites: string[] = [];
+    if (details.prerequisitesText) {
+        let text = details.prerequisitesText;
+
+        // Map full names to codes
+        const replacements: Record<string, string> = {
+            "Mathematics": "MATH",
+            "Physics": "PHYS",
+            "Chemistry": "CHEM",
+            "Engineering": "ENGG",
+            "Digital Engineering": "ENDG",
+            "Software Engineering": "ENSF",
+            "Electrical Engineering": "ENEL",
+            "Computer Engineering": "ENCM",
+            "Mechanical Engineering": "ENME",
+            "Energy and Environment": "ENEE",
+            "Biomedical Engineering": "BMEN",
+            "Chemical Engineering": "CHEE",
+            "Civil Engineering": "CIVL",
+            "Geomatics Engineering": "ENGO", // Note: GEOM vs ENGO? Text says Geomatics Engineering usually ENGO
+            "Petroleum Engineering": "PETR",
+            "Accounting": "ACCT",
+            "Economics": "ECON",
+            "Entrepreneurship and Innovation": "ENTI",
+            "Strategy and Global Management": "SGMA",
+            "Actuarial Science": "ACSC",
+            "Data Science": "DATA",
+            "Computer Science": "CPSC",
+            "Statistics": "STAT",
+        };
+
+        for (const [full, code] of Object.entries(replacements)) {
+            text = text.replace(new RegExp(full, "g"), code);
         }
-        : {};
+
+        // Regex to find course codes like "MATH 275", "ENGG 200"
+        // Matches 3-4 uppercase letters, optional space, 3 digits
+        const matches = text.matchAll(/([A-Z]{3,4})\s?(\d{3})/g);
+        for (const match of matches) {
+            // Normalize to "SUBJ NUM" format
+            prerequisites.push(`${match[1]} ${match[2]}`);
+        }
+    }
+
+    return {
+        name: details.title,
+        description: details.description,
+        units: details.units,
+        prerequisites: prerequisites,
+    };
 };
 
 // Independent course registry - all undergraduate courses
@@ -1562,7 +1606,7 @@ const SUSTAINABLE_SYSTEMS_COURSES: Course[] = [
 const ENERGY_DIPLOMA_DEGREE_COURSES: Course[] = [
 ];
 
-const AEROSPACE_ENGINEERING_COURSES: Course[] = [
+const MINOR_AEROSPACE_COURSES: Course[] = [
 	{
 		id: "AERO 410",
 		label: "AERO 410",
@@ -1601,7 +1645,7 @@ const AEROSPACE_ENGINEERING_COURSES: Course[] = [
 	},
 ];
 
-const BIOMEDICAL_ENGINEERING_COURSES: Course[] = [
+const MINOR_BIOMEDICAL_COURSES: Course[] = [
 	{
 		id: "BIOE 301",
 		label: "BIOE 301",
@@ -1628,7 +1672,7 @@ const BIOMEDICAL_ENGINEERING_COURSES: Course[] = [
 	},
 ];
 
-const DIGITAL_ENGINEERING_COURSES: Course[] = [
+const MINOR_DIGITAL_COURSES: Course[] = [
 	{
 		id: "ENDG 310",
 		label: "ENDG 310",
@@ -1667,7 +1711,7 @@ const DIGITAL_ENGINEERING_COURSES: Course[] = [
 	},
 ];
 
-const ENERGY_AND_ENVIRONMENT_COURSES: Course[] = [
+const MINOR_ENERGY_AND_ENVIRONMENT_COURSES: Course[] = [
 	{
 		id: "EENG 311",
 		label: "EENG 311",
@@ -1688,7 +1732,7 @@ const ENERGY_AND_ENVIRONMENT_COURSES: Course[] = [
 	},
 ];
 
-const MECHATRONICS_COURSES: Course[] = [
+const MINOR_MECHATRONICS_COURSES: Course[] = [
 	{
 		id: "ELE 301",
 		label: "ELE 301",
@@ -1745,7 +1789,7 @@ const MECHATRONICS_COURSES: Course[] = [
 	},
 ];
 
-const ENTREPRENEURSHIP_AND_ENTERPRISE_DEVELOPMENT_MEED_COURSES: Course[] = [
+const MINOR_ENTREPRENEURSHIP_AND_ENTERPRISE_DEVELOPMENT_MEED_COURSES: Course[] = [
 ];
 
 export const MAJORS: Major[] = [
@@ -1920,84 +1964,84 @@ export const MINORS: Minor[] = [
 	{
 		id: "aerospace_engineering",
 		label: "Aerospace Engineering",
-		requiredCourses: AEROSPACE_ENGINEERING_COURSES.map((c) => c.id),
+		requiredCourses: MINOR_AEROSPACE_COURSES.map((c) => c.id),
 		requirementGroups: [
 			{
 				id: "core_aerospace_engineering",
 				label: "Core Aerospace Engineering Courses",
 				type: "courses",
-				courses: AEROSPACE_ENGINEERING_COURSES.map((c) => c.id),
-				requiredCourses: AEROSPACE_ENGINEERING_COURSES.length,
+				courses: MINOR_AEROSPACE_COURSES.map((c) => c.id),
+				requiredCourses: MINOR_AEROSPACE_COURSES.length,
 			},
 		],
 	},
 	{
 		id: "biomedical_engineering",
 		label: "Biomedical Engineering",
-		requiredCourses: BIOMEDICAL_ENGINEERING_COURSES.map((c) => c.id),
+		requiredCourses: MINOR_BIOMEDICAL_COURSES.map((c) => c.id),
 		requirementGroups: [
 			{
 				id: "core_biomedical_engineering",
 				label: "Core Biomedical Engineering Courses",
 				type: "courses",
-				courses: BIOMEDICAL_ENGINEERING_COURSES.map((c) => c.id),
-				requiredCourses: BIOMEDICAL_ENGINEERING_COURSES.length,
+				courses: MINOR_BIOMEDICAL_COURSES.map((c) => c.id),
+				requiredCourses: MINOR_BIOMEDICAL_COURSES.length,
 			},
 		],
 	},
 	{
 		id: "digital_engineering",
 		label: "Digital Engineering",
-		requiredCourses: DIGITAL_ENGINEERING_COURSES.map((c) => c.id),
+		requiredCourses: MINOR_DIGITAL_COURSES.map((c) => c.id),
 		requirementGroups: [
 			{
 				id: "core_digital_engineering",
 				label: "Core Digital Engineering Courses",
 				type: "courses",
-				courses: DIGITAL_ENGINEERING_COURSES.map((c) => c.id),
-				requiredCourses: DIGITAL_ENGINEERING_COURSES.length,
+				courses: MINOR_DIGITAL_COURSES.map((c) => c.id),
+				requiredCourses: MINOR_DIGITAL_COURSES.length,
 			},
 		],
 	},
 	{
 		id: "energy_and_environment_engineering",
 		label: "Energy and Environment Engineering",
-		requiredCourses: ENERGY_AND_ENVIRONMENT_COURSES.map((c) => c.id),
+		requiredCourses: MINOR_ENERGY_AND_ENVIRONMENT_COURSES.map((c) => c.id),
 		requirementGroups: [
 			{
 				id: "core_energy_and_environment_engineering",
 				label: "Core Energy and Environment Engineering Courses",
 				type: "courses",
-				courses: ENERGY_AND_ENVIRONMENT_COURSES.map((c) => c.id),
-				requiredCourses: ENERGY_AND_ENVIRONMENT_COURSES.length,
+				courses: MINOR_ENERGY_AND_ENVIRONMENT_COURSES.map((c) => c.id),
+				requiredCourses: MINOR_ENERGY_AND_ENVIRONMENT_COURSES.length,
 			},
 		],
 	},
 	{
 		id: "mechatronics_engineering",
 		label: "Mechatronics Engineering",
-		requiredCourses: MECHATRONICS_COURSES.map((c) => c.id),
+		requiredCourses: MINOR_MECHATRONICS_COURSES.map((c) => c.id),
 		requirementGroups: [
 			{
 				id: "core_mechatronics_engineering",
 				label: "Core Mechatronics Engineering Courses",
 				type: "courses",
-				courses: MECHATRONICS_COURSES.map((c) => c.id),
-				requiredCourses: MECHATRONICS_COURSES.length,
+				courses: MINOR_MECHATRONICS_COURSES.map((c) => c.id),
+				requiredCourses: MINOR_MECHATRONICS_COURSES.length,
 			},
 		],
 	},
 	{
 		id: "entrepreneurship",
 		label: "Entrepreneurship and Enterprise Development (MEED)",
-		requiredCourses: ENTREPRENEURSHIP_AND_ENTERPRISE_DEVELOPMENT_MEED_COURSES.map((c) => c.id),
+		requiredCourses: MINOR_ENTREPRENEURSHIP_AND_ENTERPRISE_DEVELOPMENT_MEED_COURSES.map((c) => c.id),
 		requirementGroups: [
 			{
 				id: "core_entrepreneurship",
 				label: "Core Entrepreneurship and Enterprise Development (MEED) Courses",
 				type: "courses",
-				courses: ENTREPRENEURSHIP_AND_ENTERPRISE_DEVELOPMENT_MEED_COURSES.map((c) => c.id),
-				requiredCourses: ENTREPRENEURSHIP_AND_ENTERPRISE_DEVELOPMENT_MEED_COURSES.length,
+				courses: MINOR_ENTREPRENEURSHIP_AND_ENTERPRISE_DEVELOPMENT_MEED_COURSES.map((c) => c.id),
+				requiredCourses: MINOR_ENTREPRENEURSHIP_AND_ENTERPRISE_DEVELOPMENT_MEED_COURSES.length,
 			},
 		],
 	},
@@ -2020,6 +2064,7 @@ export const PROGRAM_HIERARCHY: ProgramHierarchy = {
 [
     ...COMMON_YEAR_COURSES,
     ...BUSINESS_COURSES,
+    // Majors
     ...BIOMEDICAL_ENGINEERING_COURSES,
     ...CHEMICAL_ENGINEERING_COURSES,
     ...CIVIL_ENGINEERING_COURSES,
@@ -2031,11 +2076,13 @@ export const PROGRAM_HIERARCHY: ProgramHierarchy = {
     ...SOFTWARE_ENGINEERING_COURSES,
     ...SUSTAINABLE_SYSTEMS_COURSES,
     ...ENERGY_DIPLOMA_DEGREE_COURSES,
-    ...AEROSPACE_ENGINEERING_COURSES,
-    ...DIGITAL_ENGINEERING_COURSES,
-    ...ENERGY_AND_ENVIRONMENT_COURSES,
-    ...MECHATRONICS_COURSES,
-    ...ENTREPRENEURSHIP_AND_ENTERPRISE_DEVELOPMENT_MEED_COURSES,
+    // Minors
+    ...MINOR_AEROSPACE_COURSES,
+    ...MINOR_BIOMEDICAL_COURSES,
+    ...MINOR_DIGITAL_COURSES,
+    ...MINOR_ENERGY_AND_ENVIRONMENT_COURSES,
+    ...MINOR_MECHATRONICS_COURSES,
+    ...MINOR_ENTREPRENEURSHIP_AND_ENTERPRISE_DEVELOPMENT_MEED_COURSES,
 ].forEach((c) => {
     UNDERGRADUATE_COURSES[c.id] = c;
 });
