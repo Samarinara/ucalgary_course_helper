@@ -1,161 +1,197 @@
 import type {
-    Course,
-    Major,
-    Minor,
-    RequirementGroup,
-    ProgramHierarchy,
+	Course,
+	Major,
+	Minor,
+	RequirementGroup,
+	ProgramHierarchy,
 } from "./types";
 import courseDetails from "./courseDetails.json";
 
 // Helper to get details
 const getDetails = (id: string) => {
-    const details = (courseDetails as any)[id];
-    if (!details) return {};
+	const details = (courseDetails as any)[id];
+	if (!details) return {};
 
-    const prerequisites: string[] = [];
-    if (details.prerequisitesText) {
-        let text = details.prerequisitesText;
+	const prerequisites: string[] = [];
+	if (details.prerequisitesText) {
+		let text = details.prerequisitesText;
 
-        // Map full names to codes
-        const replacements: Record<string, string> = {
-            "Mathematics": "MATH",
-            "Physics": "PHYS",
-            "Chemistry": "CHEM",
-            "Engineering": "ENGG",
-            "Digital Engineering": "ENDG",
-            "Software Engineering": "ENSF",
-            "Electrical Engineering": "ENEL",
-            "Computer Engineering": "ENCM",
-            "Mechanical Engineering": "ENME",
-            "Energy and Environment": "ENEE",
-            "Biomedical Engineering": "BMEN",
-            "Chemical Engineering": "CHEE",
-            "Civil Engineering": "CIVL",
-            "Geomatics Engineering": "ENGO", // Note: GEOM vs ENGO? Text says Geomatics Engineering usually ENGO
-            "Petroleum Engineering": "PETR",
-            "Accounting": "ACCT",
-            "Economics": "ECON",
-            "Entrepreneurship and Innovation": "ENTI",
-            "Strategy and Global Management": "SGMA",
-            "Actuarial Science": "ACSC",
-            "Data Science": "DATA",
-            "Computer Science": "CPSC",
-            "Statistics": "STAT",
-        };
+		// Map full names to codes
+		const replacements: Record<string, string> = {
+			"Mathematics": "MATH",
+			"Physics": "PHYS",
+			"Chemistry": "CHEM",
+			"Engineering": "ENGG",
+			"Digital Engineering": "ENDG",
+			"Software Engineering": "ENSF",
+			"Electrical Engineering": "ENEL",
+			"Computer Engineering": "ENCM",
+			"Mechanical Engineering": "ENME",
+			"Energy and Environment": "ENEE",
+			"Biomedical Engineering": "BMEN",
+			"Chemical Engineering": "CHEE",
+			"Civil Engineering": "CIVL",
+			"Geomatics Engineering": "ENGO", // Note: GEOM vs ENGO? Text says Geomatics Engineering usually ENGO
+			"Petroleum Engineering": "PETR",
+			"Accounting": "ACCT",
+			"Economics": "ECON",
+			"Entrepreneurship and Innovation": "ENTI",
+			"Strategy and Global Management": "SGMA",
+			"Actuarial Science": "ACSC",
+			"Data Science": "DATA",
+			"Computer Science": "CPSC",
+			"Statistics": "STAT",
+		};
 
-        for (const [full, code] of Object.entries(replacements)) {
-            text = text.replace(new RegExp(full, "g"), code);
-        }
+		for (const [full, code] of Object.entries(replacements)) {
+			text = text.replace(new RegExp(full, "g"), code);
+		}
 
-        // Regex to find course codes like "MATH 275", "ENGG 200"
-        // Matches 3-4 uppercase letters, optional space, 3 digits
-        const matches = text.matchAll(/([A-Z]{3,4})\s?(\d{3})/g);
-        for (const match of matches) {
-            // Normalize to "SUBJ NUM" format
-            prerequisites.push(`${match[1]} ${match[2]}`);
-        }
-    }
+		// Regex to find course codes like "MATH 275", "ENGG 200"
+		// Matches 3-4 uppercase letters, optional space, 3 digits
+		const matches = text.matchAll(/([A-Z]{3,4})\s?(\d{3})/g);
+		for (const match of matches) {
+			// Normalize to "SUBJ NUM" format
+			prerequisites.push(`${match[1]} ${match[2]}`);
+		}
+	}
 
-    return {
-        name: details.title,
-        description: details.description,
-        units: details.units,
-        prerequisites: prerequisites,
-    };
+	return {
+		name: details.title,
+		description: details.description,
+		units: details.units,
+		prerequisites: prerequisites,
+	};
 };
+
+const MINOR_SPECIFIC_COURSES: Course[] = [
+	// Aerospace
+	{ id: "ENAE 410", label: "ENAE 410", name: "Aerospace Analysis and Design", prerequisites: [], units: 3 },
+	{ id: "ENAE 411", label: "ENAE 411", name: "Avionics and System Design", prerequisites: [], units: 3 },
+	// Biomedical
+	{ id: "BMEN 301", label: "BMEN 301", name: "Biomedical Engineering Fundamentals", prerequisites: [], units: 3 },
+	{ id: "BMEN 309", label: "BMEN 309", name: "Anatomy and Physiology for Engineers", prerequisites: [], units: 3 },
+	{ id: "BMEN 401", label: "BMEN 401", name: "Biomedical Signal Processing", prerequisites: [], units: 3 },
+	{ id: "BMEN 415", label: "BMEN 415", name: "Sensors and Instrumentation for Biomedical Engineers", prerequisites: [], units: 3 },
+	// Energy & Environment
+	{ id: "ENEE 355", label: "ENEE 355", name: "Introduction to Energy and the Environment", prerequisites: [], units: 3 },
+	{ id: "ENEE 377", label: "ENEE 377", name: "Energy and Environmental Systems Analysis", prerequisites: [], units: 3 },
+	{ id: "ENEE 501", label: "ENEE 501", name: "Energy Engineering Project I", prerequisites: [], units: 3 },
+	{ id: "ENEE 503", label: "ENEE 503", name: "Life Cycle Assessment", prerequisites: [], units: 3 },
+	{ id: "ENEE 505", label: "ENEE 505", name: "Effluent Treatment Processes for Energy Industry", prerequisites: [], units: 3 },
+	{ id: "ENEE 575", label: "ENEE 575", name: "Alternative Energy Systems", prerequisites: [], units: 3 },
+	{ id: "ENEE 577", label: "ENEE 577", name: "Electrical Energy Systems", prerequisites: [], units: 3 },
+	// Manufacturing
+	{ id: "ENMF 514", label: "ENMF 514", name: "Manufacturing Systems", prerequisites: [], units: 3 },
+	{ id: "ENMF 533", label: "ENMF 533", name: "Manufacturing Engineering", prerequisites: [], units: 3 },
+	// Petroleum
+	{ id: "PETR 523", label: "PETR 523", name: "Introduction to Reservoir Engineering", prerequisites: [], units: 3 },
+	// Digital
+	{ id: "ENDG 310", label: "ENDG 310", name: "Digital Engineering I", prerequisites: [], units: 3 },
+	{ id: "ENDG 311", label: "ENDG 311", name: "Digital Engineering II", prerequisites: [], units: 3 },
+	{ id: "ENDG 410", label: "ENDG 410", name: "Digital Engineering III", prerequisites: [], units: 3 },
+	{ id: "ENDG 411", label: "ENDG 411", name: "Digital Engineering IV", prerequisites: [], units: 3 },
+	{ id: "ENDG 510", label: "ENDG 510", name: "Digital Engineering V", prerequisites: [], units: 3 },
+	{ id: "ENDG 511", label: "ENDG 511", name: "Digital Engineering VI", prerequisites: [], units: 3 },
+	// Mechatronics
+	{ id: "MECH 561", label: "MECH 561", name: "Mechatronics I", prerequisites: [], units: 3 },
+	{ id: "MECH 562", label: "MECH 562", name: "Mechatronics II", prerequisites: [], units: 3 },
+];
 
 // Independent course registry - all undergraduate courses
 export const UNDERGRADUATE_COURSES: Record<string, Course> = {};
 
+const ENERGY_DIPLOMA_DEGREE_COURSES: Course[] = [
+];
 // Common Year Courses (Preserving existing)
 const COMMON_YEAR_COURSES: Course[] = [
-    {
-        id: "ENGG 200",
-        label: "ENGG 200",
-        prerequisites: [],
-        ...getDetails("ENGG 200"),
-    },
-    {
-        id: "ENGG 202",
-        label: "ENGG 202",
-        prerequisites: [],
-        ...getDetails("ENGG 202"),
-    },
-    {
-        id: "ENGG 204",
-        label: "ENGG 204",
-        prerequisites: [],
-        ...getDetails("ENGG 204"),
-    },
-    {
-        id: "ENGG 212",
-        label: "ENGG 212",
-        prerequisites: [],
-        ...getDetails("ENGG 212"),
-    },
-    {
-        id: "ENGG 225",
-        label: "ENGG 225",
-        prerequisites: [],
-        ...getDetails("ENGG 225"),
-    },
-    {
-        id: "ENDG 233",
-        label: "ENDG 233",
-        prerequisites: [],
-        ...getDetails("ENDG 233"),
-    },
-    {
-        id: "MATH 275",
-        label: "MATH 275",
-        prerequisites: [],
-        ...getDetails("MATH 275"),
-    },
-    {
-        id: "MATH 277",
-        label: "MATH 277",
-        prerequisites: ["MATH 275"],
-        ...getDetails("MATH 277"),
-    },
-    {
-        id: "MATH 211",
-        label: "MATH 211",
-        prerequisites: [],
-        ...getDetails("MATH 211"),
-    },
-    {
-        id: "PHYS 259",
-        label: "PHYS 259",
-        prerequisites: [],
-        ...getDetails("PHYS 259"),
-    },
+	{
+		id: "ENGG 200",
+		label: "ENGG 200",
+		prerequisites: [],
+		...getDetails("ENGG 200"),
+	},
+	{
+		id: "ENGG 202",
+		label: "ENGG 202",
+		prerequisites: [],
+		...getDetails("ENGG 202"),
+	},
+	{
+		id: "ENGG 204",
+		label: "ENGG 204",
+		prerequisites: [],
+		...getDetails("ENGG 204"),
+	},
+	{
+		id: "ENGG 212",
+		label: "ENGG 212",
+		prerequisites: [],
+		...getDetails("ENGG 212"),
+	},
+	{
+		id: "ENGG 225",
+		label: "ENGG 225",
+		prerequisites: [],
+		...getDetails("ENGG 225"),
+	},
+	{
+		id: "ENDG 233",
+		label: "ENDG 233",
+		prerequisites: [],
+		...getDetails("ENDG 233"),
+	},
+	{
+		id: "MATH 275",
+		label: "MATH 275",
+		prerequisites: [],
+		...getDetails("MATH 275"),
+	},
+	{
+		id: "MATH 277",
+		label: "MATH 277",
+		prerequisites: ["MATH 275"],
+		...getDetails("MATH 277"),
+	},
+	{
+		id: "MATH 211",
+		label: "MATH 211",
+		prerequisites: [],
+		...getDetails("MATH 211"),
+	},
+	{
+		id: "PHYS 259",
+		label: "PHYS 259",
+		prerequisites: [],
+		...getDetails("PHYS 259"),
+	},
 ];
 
 const BUSINESS_COURSES: Course[] = [
-    {
-        id: "SGMA 217",
-        label: "SGMA 217",
-        prerequisites: [],
-        ...getDetails("SGMA 217"),
-    },
-    {
-        id: "ECON 201",
-        label: "ECON 201",
-        prerequisites: [],
-        ...getDetails("ECON 201"),
-    },
-    {
-        id: "ECON 203",
-        label: "ECON 203",
-        prerequisites: [],
-        ...getDetails("ECON 203"),
-    },
-    {
-        id: "ENTI 317",
-        label: "ENTI 317",
-        prerequisites: [],
-        ...getDetails("ENTI 317"),
-    },
+	{
+		id: "SGMA 217",
+		label: "SGMA 217",
+		prerequisites: [],
+		...getDetails("SGMA 217"),
+	},
+	{
+		id: "ECON 201",
+		label: "ECON 201",
+		prerequisites: [],
+		...getDetails("ECON 201"),
+	},
+	{
+		id: "ECON 203",
+		label: "ECON 203",
+		prerequisites: [],
+		...getDetails("ECON 203"),
+	},
+	{
+		id: "ENTI 317",
+		label: "ENTI 317",
+		prerequisites: [],
+		...getDetails("ENTI 317"),
+	},
 ];
 const BIOMEDICAL_ENGINEERING_COURSES: Course[] = [
 	{
@@ -1603,72 +1639,47 @@ const SUSTAINABLE_SYSTEMS_COURSES: Course[] = [
 	},
 ];
 
-const ENERGY_DIPLOMA_DEGREE_COURSES: Course[] = [
-];
 
 const MINOR_AEROSPACE_COURSES: Course[] = [
 	{
-		id: "AERO 410",
-		label: "AERO 410",
+		id: "ENAE 410",
+		label: "ENAE 410",
 		prerequisites: [],
-		...getDetails("AERO 410"),
+		...getDetails("ENAE 410"),
 	},
 	{
-		id: "AERO 411",
-		label: "AERO 411",
+		id: "ENAE 411",
+		label: "ENAE 411",
 		prerequisites: [],
-		...getDetails("AERO 411"),
+		...getDetails("ENAE 411"),
 	},
-	{
-		id: "ELE 301",
-		label: "ELE 301",
-		prerequisites: [],
-		...getDetails("ELE 301"),
-	},
-	{
-		id: "ENGG 501",
-		label: "ENGG 501",
-		prerequisites: [],
-		...getDetails("ENGG 501"),
-	},
-	{
-		id: "ENGG 502",
-		label: "ENGG 502",
-		prerequisites: [],
-		...getDetails("ENGG 502"),
-	},
-	{
-		id: "GEOM 333",
-		label: "GEOM 333",
-		prerequisites: [],
-		...getDetails("GEOM 333"),
-	},
+	// Electives placeholder (would need logic to select from list)
 ];
 
 const MINOR_BIOMEDICAL_COURSES: Course[] = [
 	{
-		id: "BIOE 301",
-		label: "BIOE 301",
+		id: "BMEN 301",
+		label: "BMEN 301",
 		prerequisites: [],
-		...getDetails("BIOE 301"),
+		...getDetails("BMEN 301"),
 	},
 	{
-		id: "BIOE 309",
-		label: "BIOE 309",
+		id: "BMEN 309",
+		label: "BMEN 309",
 		prerequisites: [],
-		...getDetails("BIOE 309"),
+		...getDetails("BMEN 309"),
 	},
 	{
-		id: "BIOE 401",
-		label: "BIOE 401",
+		id: "BMEN 401",
+		label: "BMEN 401",
 		prerequisites: [],
-		...getDetails("BIOE 401"),
+		...getDetails("BMEN 401"),
 	},
 	{
-		id: "BIOE 415",
-		label: "BIOE 415",
+		id: "BMEN 415",
+		label: "BMEN 415",
 		prerequisites: [],
-		...getDetails("BIOE 415"),
+		...getDetails("BMEN 415"),
 	},
 ];
 
@@ -1713,67 +1724,26 @@ const MINOR_DIGITAL_COURSES: Course[] = [
 
 const MINOR_ENERGY_AND_ENVIRONMENT_COURSES: Course[] = [
 	{
-		id: "EENG 311",
-		label: "EENG 311",
+		id: "ENEE 355",
+		label: "ENEE 355",
 		prerequisites: [],
-		...getDetails("EENG 311"),
+		...getDetails("ENEE 355"),
 	},
 	{
-		id: "EENG 355",
-		label: "EENG 355",
+		id: "ENEE 377",
+		label: "ENEE 377",
 		prerequisites: [],
-		...getDetails("EENG 355"),
+		...getDetails("ENEE 377"),
 	},
-	{
-		id: "EENG 377",
-		label: "EENG 377",
-		prerequisites: [],
-		...getDetails("EENG 377"),
-	},
+	// Add other ENEE courses as options or required depending on stream, listing core for now
 ];
 
 const MINOR_MECHATRONICS_COURSES: Course[] = [
 	{
-		id: "ELE 301",
-		label: "ELE 301",
+		id: "ENMF 533",
+		label: "ENMF 533",
 		prerequisites: [],
-		...getDetails("ELE 301"),
-	},
-	{
-		id: "ELE 327",
-		label: "ELE 327",
-		prerequisites: [],
-		...getDetails("ELE 327"),
-	},
-	{
-		id: "ENGG 501",
-		label: "ENGG 501",
-		prerequisites: [],
-		...getDetails("ENGG 501"),
-	},
-	{
-		id: "ENGG 502",
-		label: "ENGG 502",
-		prerequisites: [],
-		...getDetails("ENGG 502"),
-	},
-	{
-		id: "GEOM 333",
-		label: "GEOM 333",
-		prerequisites: [],
-		...getDetails("GEOM 333"),
-	},
-	{
-		id: "MECH 501",
-		label: "MECH 501",
-		prerequisites: [],
-		...getDetails("MECH 501"),
-	},
-	{
-		id: "MECH 502",
-		label: "MECH 502",
-		prerequisites: [],
-		...getDetails("MECH 502"),
+		...getDetails("ENMF 533"),
 	},
 	{
 		id: "MECH 561",
@@ -1788,6 +1758,28 @@ const MINOR_MECHATRONICS_COURSES: Course[] = [
 		...getDetails("MECH 562"),
 	},
 ];
+
+const MINOR_MANUFACTURING_COURSES: Course[] = [
+	{
+		id: "ENMF 514",
+		label: "ENMF 514",
+		prerequisites: [],
+		...getDetails("ENMF 514"),
+	},
+];
+
+const MINOR_PETROLEUM_COURSES: Course[] = [
+	{
+		id: "PETR 523",
+		label: "PETR 523",
+		prerequisites: [],
+		...getDetails("PETR 523"),
+	},
+];
+
+const MINOR_STRUCTURAL_COURSES: Course[] = []; // Placeholder
+const MINOR_TRANSPORTATION_COURSES: Course[] = []; // Placeholder
+const MINOR_COMPUTER_ENGINEERING_COURSES: Course[] = []; // Placeholder
 
 const MINOR_ENTREPRENEURSHIP_AND_ENTERPRISE_DEVELOPMENT_MEED_COURSES: Course[] = [
 ];
@@ -2045,46 +2037,98 @@ export const MINORS: Minor[] = [
 			},
 		],
 	},
+	{
+		id: "manufacturing_engineering",
+		label: "Manufacturing Engineering",
+		requiredCourses: MINOR_MANUFACTURING_COURSES.map((c) => c.id),
+		requirementGroups: [
+			{
+				id: "core_manufacturing_engineering",
+				label: "Core Manufacturing Engineering Courses",
+				type: "courses",
+				courses: MINOR_MANUFACTURING_COURSES.map((c) => c.id),
+				requiredCourses: MINOR_MANUFACTURING_COURSES.length,
+			},
+		],
+	},
+	{
+		id: "petroleum_engineering",
+		label: "Petroleum Engineering",
+		requiredCourses: MINOR_PETROLEUM_COURSES.map((c) => c.id),
+		requirementGroups: [
+			{
+				id: "core_petroleum_engineering",
+				label: "Core Petroleum Engineering Courses",
+				type: "courses",
+				courses: MINOR_PETROLEUM_COURSES.map((c) => c.id),
+				requiredCourses: MINOR_PETROLEUM_COURSES.length,
+			},
+		],
+	},
+	{
+		id: "structural_engineering",
+		label: "Structural Engineering",
+		requiredCourses: MINOR_STRUCTURAL_COURSES.map((c) => c.id),
+		requirementGroups: [],
+	},
+	{
+		id: "transportation_engineering",
+		label: "Transportation Engineering",
+		requiredCourses: MINOR_TRANSPORTATION_COURSES.map((c) => c.id),
+		requirementGroups: [],
+	},
+	{
+		id: "computer_engineering",
+		label: "Computer Engineering",
+		requiredCourses: MINOR_COMPUTER_ENGINEERING_COURSES.map((c) => c.id),
+		requirementGroups: [],
+	},
 ];
 
 export const PROGRAM_HIERARCHY: ProgramHierarchy = {
 	"biomedical_engineering": ["digital_engineering", "entrepreneurship"],
-	"chemical_engineering": ["biomedical_engineering", "digital_engineering", "entrepreneurship"],
-	"civil_engineering": ["biomedical_engineering", "digital_engineering", "entrepreneurship"],
-	"electrical_engineering": ["aerospace_engineering", "biomedical_engineering", "digital_engineering", "entrepreneurship"],
+	"chemical_engineering": ["biomedical_engineering", "digital_engineering", "energy_and_environment_engineering", "entrepreneurship", "petroleum_engineering"],
+	"civil_engineering": ["biomedical_engineering", "digital_engineering", "energy_and_environment_engineering", "entrepreneurship", "structural_engineering", "transportation_engineering"],
+	"electrical_engineering": ["aerospace_engineering", "biomedical_engineering", "digital_engineering", "energy_and_environment_engineering", "entrepreneurship", "mechatronics_engineering", "computer_engineering"],
 	"engineering_physics": ["digital_engineering", "entrepreneurship"],
-	"geomatics_engineering": ["aerospace_engineering", "biomedical_engineering", "digital_engineering", "entrepreneurship"],
-	"mechanical_engineering": ["aerospace_engineering", "biomedical_engineering", "digital_engineering", "entrepreneurship"],
+	"geomatics_engineering": ["aerospace_engineering", "biomedical_engineering", "digital_engineering", "energy_and_environment_engineering", "entrepreneurship"],
+	"mechanical_engineering": ["aerospace_engineering", "biomedical_engineering", "digital_engineering", "energy_and_environment_engineering", "entrepreneurship", "mechatronics_engineering", "manufacturing_engineering", "petroleum_engineering"],
 	"oil_gas_engineering_petroleum": ["digital_engineering", "entrepreneurship"],
-	"software_engineering": ["aerospace_engineering", "biomedical_engineering", "digital_engineering", "entrepreneurship"],
+	"software_engineering": ["aerospace_engineering", "biomedical_engineering", "digital_engineering", "entrepreneurship", "mechatronics_engineering"],
 	"sustainable_systems": ["digital_engineering", "entrepreneurship"],
 	"energy_eng": ["digital_engineering", "entrepreneurship"],
 };
 // Populate independent course registry
 [
-    ...COMMON_YEAR_COURSES,
-    ...BUSINESS_COURSES,
-    // Majors
-    ...BIOMEDICAL_ENGINEERING_COURSES,
-    ...CHEMICAL_ENGINEERING_COURSES,
-    ...CIVIL_ENGINEERING_COURSES,
-    ...ELECTRICAL_ENGINEERING_COURSES,
-    ...ENGINEERING_PHYSICS_COURSES,
-    ...GEOMATICS_ENGINEERING_COURSES,
-    ...MECHANICAL_ENGINEERING_COURSES,
-    ...OIL_GAS_PETROLEUM_COURSES,
-    ...SOFTWARE_ENGINEERING_COURSES,
-    ...SUSTAINABLE_SYSTEMS_COURSES,
-    ...ENERGY_DIPLOMA_DEGREE_COURSES,
-    // Minors
-    ...MINOR_AEROSPACE_COURSES,
-    ...MINOR_BIOMEDICAL_COURSES,
-    ...MINOR_DIGITAL_COURSES,
-    ...MINOR_ENERGY_AND_ENVIRONMENT_COURSES,
-    ...MINOR_MECHATRONICS_COURSES,
-    ...MINOR_ENTREPRENEURSHIP_AND_ENTERPRISE_DEVELOPMENT_MEED_COURSES,
+	...COMMON_YEAR_COURSES,
+	...BUSINESS_COURSES,
+	// Majors
+	...BIOMEDICAL_ENGINEERING_COURSES,
+	...CHEMICAL_ENGINEERING_COURSES,
+	...CIVIL_ENGINEERING_COURSES,
+	...ELECTRICAL_ENGINEERING_COURSES,
+	...ENGINEERING_PHYSICS_COURSES,
+	...GEOMATICS_ENGINEERING_COURSES,
+	...MECHANICAL_ENGINEERING_COURSES,
+	...OIL_GAS_PETROLEUM_COURSES,
+	...SOFTWARE_ENGINEERING_COURSES,
+	...SUSTAINABLE_SYSTEMS_COURSES,
+	...ENERGY_DIPLOMA_DEGREE_COURSES,
+	// Minors
+	...MINOR_AEROSPACE_COURSES,
+	...MINOR_BIOMEDICAL_COURSES,
+	...MINOR_DIGITAL_COURSES,
+	...MINOR_ENERGY_AND_ENVIRONMENT_COURSES,
+	...MINOR_MECHATRONICS_COURSES,
+	...MINOR_ENTREPRENEURSHIP_AND_ENTERPRISE_DEVELOPMENT_MEED_COURSES,
+	...MINOR_MANUFACTURING_COURSES,
+	...MINOR_PETROLEUM_COURSES,
+	...MINOR_STRUCTURAL_COURSES,
+	...MINOR_TRANSPORTATION_COURSES,
+	...MINOR_COMPUTER_ENGINEERING_COURSES,
+	...MINOR_SPECIFIC_COURSES,
 ].forEach((c) => {
-    UNDERGRADUATE_COURSES[c.id] = c;
+	UNDERGRADUATE_COURSES[c.id] = c;
 });
 
 // Backward compatibility

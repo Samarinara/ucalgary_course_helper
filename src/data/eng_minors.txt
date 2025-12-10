@@ -1,0 +1,308 @@
+Here’s a **comprehensive guide** to the minors offered to undergraduate students at Schulich School of Engineering at University of Calgary (UCalgary) — what they are, who can take them, how they work, and key considerations.
+
+---
+
+## 🎯 Overview: What is a Minor at UCalgary Engineering
+
+* Minors are **optional**, additional programs you can combine with your engineering major. ([Schulich School of Engineering][1])
+* Students typically apply for a minor in their **first year (or early second year)**. ([University of Calgary Calendar][2])
+* To get the minor “on your transcript,” you must complete the required courses for the minor in addition to your major’s requirements. ([University of Calgary in Alberta][3])
+* Because engineering programs are already demanding, minors add extra workload. In many cases, you need to plan carefully to avoid overloading yourself.
+
+---
+
+## 🔧 The Minors You Can Pair with an Engineering Major
+
+Not all minors are available for each major — it depends on your base discipline (Mechanical, Electrical, Civil, etc.). The table below lists the minors, and then I discuss each in more detail. ([University of Calgary Calendar][4])
+
+| Minor                                            | Who (which majors) can take it                                                                                                           | What it's about / focus                                                                                                                |
+| ------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| Aerospace Engineering                            | Electrical, Geomatics, Mechanical, Software                                                                                              | Aircraft/spacecraft systems, avionics, drones, propulsion, navigation. ([Schulich School of Engineering][5])                           |
+| Biomedical Engineering                           | Chemical, Civil, Electrical, Geomatics, Mechanical, Software                                                                             | Applying engineering to biology/medicine (biomechanics, biomaterials, medical devices, imaging). ([Schulich School of Engineering][6]) |
+| Digital Engineering                              | Most majors (Chemical, Civil, Electrical, Geomatics, Mechanical, Biomedical*, Sustainable Systems) ([Schulich School of Engineering][7]) | Software, coding, AI/ML, IoT — digital/ computing skills for non-CS majors. ([Schulich School of Engineering][7])                      |
+| Mechatronics Engineering                         | Mechanical, Electrical, Software ([Schulich School of Engineering][8])                                                                   | Integration of mechanical + electrical + software — robotics, embedded systems, controls. ([Schulich School of Engineering][8])        |
+| Energy & Environment Engineering                 | Chemical, Civil, Electrical, Geomatics, Mechanical ([University of Calgary Calendar][4])                                                 | Energy systems, environmental impact, sustainable engineering. ([Schulich School of Engineering][1])                                   |
+| Entrepreneurship & Enterprise Development (MEED) | All engineering majors ([University of Calgary in Alberta][3])                                                                           |                                                                                                                                        |
+| Manufacturing Engineering (minor)                | Mechanical (only) ([Schulich School of Engineering][9])                                                                                  |                                                                                                                                        |
+| Petroleum Engineering (minor)                    | Some majors (e.g. Mechanical) when eligible, Chemical → Petroleum path ([University of Calgary Calendar][4])                             |                                                                                                                                        |
+| Structural Engineering (minor/concentration)     | Civil (only) ([University of Calgary Calendar][4])                                                                                       |                                                                                                                                        |
+| Transportation Engineering (minor/concentration) | Civil (only) ([University of Calgary Calendar][4])                                                                                       |                                                                                                                                        |
+| Computer Engineering (minor)                     | Electrical Engineering only ([Schulich School of Engineering][10])                                                                       |                                                                                                                                        |
+
+---
+
+## 📘 Breakdown: What Each Minor Entails
+
+### **Aerospace Engineering**
+
+* **Purpose / Focus:** Design and development of aircraft/spacecraft — avionics, propulsion, drone/remote systems, navigation, sensors. ([Schulich School of Engineering][5])
+* **Who can take it:** Electrical, Geomatics, Mechanical, or Software engineering students (from 2nd year onward) ([Schulich School of Engineering][5])
+* **What you study:** Aerospace-specific engineering courses (aircraft/vehicle design, control systems, remote sensing/avionics, propulsion, structural/flight dynamics). ([Schulich School of Engineering][5])
+* **Technical Electives:** The minor allows approved technical electives (streams vary: e.g. “Aerodynamics & Propulsion”, “Autonomous Systems – Sensing & Control”, or “Autonomous Mapping & Navigation”). Approved electives come from departments like Mechanical, Electrical/Software, Geomatics. ([University of Calgary in Alberta][11])
+* **Considerations:** Useful if you're interested in aerospace industry, drones/ UAVs, or satellite/spacecraft design. Could add considerable workload depending on electives chosen.
+
+### **Biomedical Engineering (BME)**
+
+* **Purpose / Focus:** Combines engineering and life sciences: biomechanics, biomaterials, tissue engineering, medical devices, imaging, bioprocessing, etc. ([Schulich School of Engineering][6])
+* **Who can take it:** Chemical, Civil, Electrical, Geomatics, Mechanical, Software engineering students (from 2nd year) ([Schulich School of Engineering][6])
+* **What you study:** Foundational courses in biomedical engineering + electives in areas like biomedical devices, biomaterials, bio-processing, biomedical signal processing, etc. ([Schulich School of Engineering][6])
+* **Why consider it:** Great for students interested in medical devices, healthcare, biotechnology, or bridging engineering with life sciences. Good preparation for grad school, medical school, or biomedical-related industry. ([Schulich School of Engineering][6])
+
+### **Digital Engineering**
+
+* **Purpose / Focus:** Gain computing, software, AI/ML, IoT, and systems-level digital skills useful across all fields. ([Schulich School of Engineering][7])
+* **Who can take it:** Chemical, Civil, Electrical, Geomatics, Mechanical, Biomedical*, Sustainable Systems among others (from 2nd year) ([Schulich School of Engineering][7])
+* **What you study:** Programming, software engineering fundamentals, data/algorithm courses, digital systems, emerging digital technologies. ([Schulich School of Engineering][7])
+* **Why consider it:** Digital skills are increasingly valuable across engineering disciplines (automation, control systems, data analysis, embedded systems). Adds flexibility and broadens career options — especially if your major is hardware-heavy but you want software/digital exposure.
+
+### **Mechatronics Engineering**
+
+* **Purpose / Focus:** Blend of mechanical, electrical, and software — robotics, embedded systems, smart machines, control systems. ([Schulich School of Engineering][8])
+* **Who can take it:** Mechanical, Electrical, or Software engineering students (from 2nd year) ([Schulich School of Engineering][8])
+* **What you study:** Courses across mechanical design, electronics, control theory, embedded systems, and software controlling physical systems. ([Schulich School of Engineering][8])
+* **Why consider it:** Excellent for students interested in robotics, automation, intelligent systems, or cross-disciplinary design. Combines strengths of multiple engineering domains.
+
+### **Energy and Environment Engineering**
+
+* **Purpose / Focus:** Understanding energy systems **and** their environmental impacts — sustainable energy, mitigation, resource management, environmental engineering aspects. ([University of Calgary Calendar][4])
+* **Who can take it:** Chemical, Civil, Electrical, Geomatics, Mechanical engineering students (from 2nd year) ([University of Calgary Calendar][4])
+* **Use cases:** Suitable for students interested in sustainability, renewable energy, environmental consulting, resource/energy industries.
+
+### **Entrepreneurship and Enterprise Development (MEED)**
+
+* **Purpose / Focus:** Business / entrepreneurship training — valuable for engineers interested in startups, business management, venture creation, tech commercialization. ([University of Calgary in Alberta][3])
+* **Who can take it:** All engineering majors (typically starting 2nd year) ([University of Calgary in Alberta][3])
+* **What you study:** Five courses in entrepreneurship/innovation/business management (over and above engineering degree requirements). Courses may include “Entrepreneurship and Innovation 201”, “ENTI 381”, “ENTI 401”, “ENTI 405”, plus one business elective (e.g. marketing, finance, operations management). ([University of Calgary in Alberta][3])
+* **Requirements:** You need to receive credit for an extra 15 units beyond your engineering degree. ([University of Calgary in Alberta][3])
+* **Why consider it:** Useful if you want to start your own company, lead projects, or combine engineering with business/management roles.
+
+### Other Minors / Concentrations (More Specialized / Less Common)
+
+* **Manufacturing Engineering (minor):** Available to Mechanical Engineering students. Focus on sustainable manufacturing, production systems, and related skills. ([Schulich School of Engineering][9])
+* **Petroleum Engineering (minor):** Possible for some majors (e.g. Mechanical) or via transfer from Chemical. Geared toward oil & gas industry, reservoir engineering, resource extraction. ([University of Calgary Calendar][4])
+* **Structural Engineering (minor/concentration):** For Civil Engineering students — design and analysis of structures (buildings, bridges, infrastructure). ([University of Calgary Calendar][4])
+* **Transportation Engineering (minor/concentration):** Civil Engineering students focusing on transportation systems, planning, traffic engineering, highways, transit systems. ([University of Calgary Calendar][4])
+* **Computer Engineering (minor):** For Electrical Engineering students — covers fundamentals of computing, circuits, embedded systems, etc. ([Schulich School of Engineering][10])
+
+---
+
+## ✅ Key Considerations When Choosing a Minor
+
+* **Workload is heavier:** Minors add courses beyond your major’s requirements. Some (like MEED) demand 15 extra units. ([University of Calgary in Alberta][3])
+* **Application timing matters:** Most minors require you to apply early (first or second year). For certain minors (e.g. those tied to 3rd/4th-year coursework), you may need to be “on track” in your major. ([University of Calgary Calendar][2])
+* **Not all majors can take all minors:** Always check the allowable combinations table. ([University of Calgary Calendar][4])
+* **Electives / Technical Electives vs fixed minor courses:** Many minors require approved technical electives — you often have some freedom to choose from a list, as long as prerequisites are satisfied. ([University of Calgary in Alberta][11])
+* **Planning ahead is essential:** Because engineering programs are tightly structured, adding a minor may require extra semesters or careful scheduling to avoid overload (especially if you want to do internships).
+* **Minor ≠ automatic specialization:** Having a minor shows interest/competency in an area, but in many industries, **experience (internships, projects, clubs) matters just as much or more** than the minor itself. Several students report that a minor alone doesn’t guarantee a job in the specialty. ([Reddit][12])
+
+---
+
+## 🎓 How to Decide — What to Ask Yourself
+
+Before picking a minor, consider:
+
+* **What kind of career or industries interest you?** If you want aerospace / drones → Aerospace minor. Robotics/automation → Mechatronics. Renewable energy → Energy & Environment, etc.
+* **Willingness to take more courses / longer degree time?** Minors add workload.
+* **Desire for breadth vs depth:** Do you want extra skills (e.g. software + engineering) or deeper specialization?
+* **Complementing your major:** Some minors pair naturally with certain majors (e.g. Electrical + Digital/Mechatronics, Mechanical + Aerospace/Mechatronics, Civil + Structural/Transportation).
+* **Long-term goals:** For entrepreneurship, management, or interdisciplinary work — MEED or Digital may add value. For technical specialization — minors like Petroleum, Energy & Environment, or Mechatronics may help.
+
+---
+
+If you like — I can **pull up a full “cheat sheet” spreadsheet** of **all minors** with their available majors, **approx. extra credit load**, and **what industries each minor best serves** (e.g. Aerospace → drones/space; BME → medical devices; Energy & Environment → sustainability/energy).
+Do you want me to build that spreadsheet now (as a Markdown table)?
+
+[1]: https://schulich.ucalgary.ca/future-students/undergraduate/programs/minors?utm_source=chatgpt.com "Minors | Schulich School of Engineering | University of Calgary"
+[2]: https://calendar.ucalgary.ca/pages/d965a676614d4febbe55238e11e72fce?utm_source=chatgpt.com "(EN) 3.1 Admissions | UCalgary Calendar"
+[3]: https://ucalgary.ca/pubs/calendar/archives/2022/en-4-13.html?utm_source=chatgpt.com "University of Calgary : 4.13 Minor in Entrepreneurship and Enterprise Development in the Schulich School of Engineering"
+[4]: https://calendar.ucalgary.ca/pages/820e791def22431babd4b2fb7f725ce4?utm_source=chatgpt.com "(EN) 1. Summary of Degree Programs for the Schulich School of Engineering | UCalgary Calendar"
+[5]: https://schulich.ucalgary.ca/future-students/undergraduate/programs/minors/aerospace-engineering?utm_source=chatgpt.com "Minor in Aerospace Engineering | Schulich School of Engineering | University of Calgary"
+[6]: https://schulich.ucalgary.ca/future-students/undergraduate/programs/minors/biomedical-engineering?utm_source=chatgpt.com "Minor in Biomedical Engineering | Schulich School of Engineering | University of Calgary"
+[7]: https://schulich.ucalgary.ca/future-students/undergraduate/programs/minors/digital-engineering?utm_source=chatgpt.com "Minor in Digital Engineering | Schulich School of Engineering | University of Calgary"
+[8]: https://schulich.ucalgary.ca/future-students/undergraduate/programs/minors/mechatronics-engineering?utm_source=chatgpt.com "Minor in Mechatronics Engineering | Schulich School of Engineering | University of Calgary"
+[9]: https://schulich.ucalgary.ca/future-students/undergraduate/programs/bsc-mechanical-engineering?utm_source=chatgpt.com "Bachelor of Science in Mechanical Engineering | Schulich School of Engineering | University of Calgary"
+[10]: https://schulich.ucalgary.ca/future-students/undergraduate/programs/bsc-electrical-engineering?utm_source=chatgpt.com "Bachelor of Science in Electrical Engineering | Schulich School of Engineering | University of Calgary"
+[11]: https://www.ucalgary.ca/pubs/calendar/staging/archives/2023/en-4-15.html?utm_source=chatgpt.com "University of Calgary : 4.15 Approved Technical Electives for Minors"
+[12]: https://www.reddit.com/r/UCalgary/comments/fx0luf?utm_source=chatgpt.com "Is it a good choice to have a major in ME and do minor in BME?"
+
+
+Good questions — I updated the guide and added as much detail as I could find on **required courses and conditions** for the minors at Schulich School of Engineering, University of Calgary. Because full, up-to-date minor curricula are spread across different calendar and program pages, some details (especially elective-lists) are summarized; you’ll need to confirm with the official calendar or academic adviser before committing.
+
+---
+
+# 📚 Minor Requirements at UCalgary Engineering — Detailed Guide
+
+## 📝 General rules for ALL minors
+
+* For a minor you must complete **at least 30 units** in the minor field, of which **at least 18 units must be 300-level or above**. ([University of Calgary in Alberta][1])
+* GPA requirements: Minimum 2.00 GPA over all courses counting toward the minor; at most 3 units with a “D” or “D+” grade are allowed. ([University of Calgary in Alberta][1])
+* There can be overlap between your major and minor course requirements, but the amount depends on the combination; you must check with the Associate Dean (Undergraduate) if there’s considerable overlap. ([University of Calgary in Alberta][1])
+* To apply for a minor: you apply in first year (for most minors). If demand exceeds capacity, admission to the minor is competitive, based on your most recent 10 courses. ([University of Calgary Calendar][2])
+
+---
+
+## ✈️ Aerospace Engineering (Minor)
+
+**Available for**: Electrical (ENEL), Geomatics (ENGO), Mechanical (ENME), Software (ENSF) — from 2nd year. ([Schulich School of Engineering][3])
+
+**Core required courses:** ([University of Calgary in Alberta][4])
+
+* ENAE 410 — Aerospace Analysis and Design ([University of Calgary in Alberta][4])
+* ENAE 411 — Avionics and System Design ([University of Calgary in Alberta][4])
+* Also required: a programming / electronics course depending on major (e.g., Electrical 301 or equivalent prerequisites) per the course prerequisites. ([University of Calgary in Alberta][4])
+* In addition: **9 units** of *Aerospace Engineering technical electives*, chosen from the approved electives list for the Minor. ([University of Calgary in Alberta][5])
+
+**What gets waived / replaced:** Depends on your major — for example, for Mechanical-major + Aero minor, certain regular Mechanical elective slots and some technical electives are replaced by the Aero courses/electives (see Mechanical program page). ([University of Calgary in Alberta][5])
+
+**Conditions:** Must have admission to the Minor (you apply and get accepted). Prerequisites for ENAE 410/411 require you to have certain Electrical/Software courses (or equivalent), so schedule accordingly. ([University of Calgary in Alberta][4])
+
+**Why / When to pick it:** Good if you want skills in aircraft/spacecraft design, avionics, drones, autonomous aerial or remote-sensing systems — especially effective if your main major is mechanical, electrical, geomatics or software. ([Schulich School of Engineering][3])
+
+---
+
+## 🫀 Biomedical Engineering (Minor)
+
+**Available for**: Chemical (ENCH), Civil (ENCI), Electrical (ENEL), Geomatics (ENGO), Mechanical (ENME), Software (ENSF) — from 2nd year. ([Schulich School of Engineering][6])
+
+**Core required courses (for some combinations):** depending on major. For example:
+
+* For Chemical Engineering + BME minor: must complete **BMEN 301, 309, 401, 415**. ([Coursedog PDFs][7])
+* Plus **9 units** of BME technical electives. ([Coursedog PDFs][7])
+
+**What gets waived / replaced (in some majors):**
+
+* For Chemical Eng + BME minor: 3 units of “Science Options” are not required; 9 units of Group A Chemical Eng technical electives are waived. ([Coursedog PDFs][7])
+* Because of schedule constraints, sometimes differences in complementary / elective allocations.
+
+**Electives:** From the approved BME technical electives list. ([University of Calgary in Alberta][8])
+
+**Conditions:** As with all minors, must apply and get admitted. Also need to check prerequisites for BMEN courses and overlapping credits with your major. ([University of Calgary in Alberta][1])
+
+**Why / When to pick it:** If you’re interested in medical devices, biomechanics, biomaterials, bioengineering, or pursuing grad school / med school — gives a foundation in engineering + life sciences integrated. ([Schulich School of Engineering][6])
+
+---
+
+## 💻 Digital Engineering (Minor)
+
+**Available for**: Chemical (ENCH), Civil (ENCI), Electrical (ENEL), Geomatics (ENGO), Mechanical (ENME), Biomedical (ENBI), Sustainable Systems (ENSS) — from 2nd year. ([Schulich School of Engineering][9])
+
+**Core required courses:** According to UCalgary Calendar, Digital Engineering minor requires: courses such as DE 310, 311, 410, 411, 510, 511 (or equivalent) + technical electives. For example, for a Biomedical + Digital combination the requirement is “at least 21 credits from DE 310, 311, 410, 411, 510, 511” + “3 units of Digital Engineering Technical Electives.” ([Coursedog PDFs][10])
+
+**What gets waived / replaced:** Depending on major — e.g., in Mechanical + Digital minor, some of the standard ME technical electives are replaced by the Digital courses. ([University of Calgary in Alberta][5])
+
+**Electives:** Choose from the approved technical electives for the Digital minor (see list). ([University of Calgary in Alberta][8])
+
+**Conditions:** As with others, must apply and be admitted; also must satisfy prerequisites for DE courses. ([University of Calgary Calendar][2])
+
+**Why / When to pick it:** Good for non-CS/Software majors who still want programming, AI/ML, IoT, or digital system design skills. Helpful if you foresee bridging hardware + software or want to do embedded systems, automation, data-driven engineering, etc. ([Schulich School of Engineering][9])
+
+---
+
+## 🌱 Energy & Environment (Minor)
+
+**Available for**: Chemical, Civil, Electrical, Geomatics, Mechanical — from 2nd year. ([Schulich School of Engineering][11])
+
+**Core required courses:**
+
+* ENEE 355 — Introduction to Energy and the Environment ([Schulich School of Engineering][12])
+* Additional ENEE courses such as ENEE 501, 503, 505, 507, 519, 575, 577 — depending on electives and stream. ([Schulich School of Engineering][11])
+
+**Electives / Technical electives:** The minor allows selecting from approved technical electives in the Energy & Environment category (as listed in the school’s “Approved Technical Electives for Minors”). ([University of Calgary in Alberta][8])
+
+**What gets waived / replaced (in some majors):** E.g., for Mechanical Engineering + E&E minor: some Mechanical technical electives and possibly some complementary studies requirements are replaced with Energy & Environment courses/electives. ([University of Calgary in Alberta][5])
+
+**Conditions:** Must apply and be admitted. Prerequisites must be managed; check overlaps with major courses carefully. ([University of Calgary in Alberta][1])
+
+**Why / When to pick it:** If you are interested in sustainability, energy systems, environmental impact, renewable energy, life-cycle assessment, industry-environment interface. Useful especially in chemical, civil, mechanical, or electrical majors where energy/environment intersects. ([Schulich School of Engineering][11])
+
+---
+
+## 🤖 Mechatronics Engineering (Minor)
+
+**Available for**: Mechanical (ENME), Electrical (ENEL), Software (ENSF) — from 2nd year. ([University of Calgary Calendar][13])
+
+**Required courses / technical electives:** For example, in the Mechanical program page, Mechatronics minor requires:
+
+* Manufacturing Engineering course 533, Mechanical Engineering courses 561 & 562, plus **6 units of Mechatronics technical electives**. ([University of Calgary in Alberta][5])
+* Regular Mechanical-engineering technical electives (12 units) are replaced. ([University of Calgary in Alberta][5])
+
+**What gets waived / replaced:** The standard 12 units of mechanical technical electives in the regular ME program get replaced by the Mechatronics-specific courses and electives. ([University of Calgary in Alberta][5])
+
+**Conditions:** Must apply/admitted; electives must be selected from approved list for Mechatronics (see calendar). ([University of Calgary Calendar][13])
+
+**Why / When to pick it:** Ideal for students interested in robotics, automation, control systems, embedded systems — combining mechanical, electrical, and software skills.
+
+---
+
+## 🔧 Other Minors / Concentrations
+
+Beyond the main four above, there are other minor/concentration options such as:
+
+* **Computer Engineering (minor)** — for Electrical Engineering students. ([University of Calgary Calendar][14])
+* **Manufacturing Engineering** — for Mechanical Eng. students (less common). ([University of Calgary Calendar][14])
+* **(For Civil Eng.)** Specialized minors/concentrations such as Structural Engineering or Transportation Engineering (depending on year — typically 4th year) ([University of Calgary Calendar][14])
+* **Concentration in Cadastral Surveying** — for Geomatics Eng in 4th year. ([Schulich School of Engineering][15])
+
+Because their requirements are more variable and often depend heavily on elective choices and stream specializations, you’ll want to check the relevant calendar section for full course lists.
+
+---
+
+## ✅ What to Watch Out For / Important Conditions
+
+* **Application process & timing:** You must apply for a minor (usually in first year); admission is *not* guaranteed and is based on academic performance (recent courses). ([University of Calgary Calendar][2])
+* **Prerequisites and scheduling constraints:** Some minor courses have prerequisites (especially in Aero, Mechatronics, BME) that may conflict with major course scheduling — requires careful planning. ([University of Calgary in Alberta][4])
+* **Overlap and credit limits:** Overlap between major and minor may be limited; you may not be allowed to “double-count” certain courses. ([University of Calgary in Alberta][1])
+* **Workload:** A minor can add a nontrivial amount of courses (≥ 30 units), which increases your total course load. For heavy majors (Mechanical, Electrical, Chemical, etc.), minor + major + work-term/internship may push you beyond a standard 4-year path (or make your semesters very heavy).
+* **Electives list changes:** The list of approved technical electives for minors gets updated periodically. Always refer to the most recent calendar’s “Approved Technical Electives for Minors.” ([University of Calgary in Alberta][8])
+* **Administrative approval needed:** If there’s significant overlap between the major and minor requirements (e.g. shared technical electives), you must discuss and get approval from the Associate Dean (Undergraduate). ([University of Calgary in Alberta][1])
+
+---
+
+## 📄 Example: How a Minor Alters a Major — Mechanical Engineering + Minors
+
+From the Mechanical Engineering program page (as of recent calendar) when you add various minors: ([University of Calgary in Alberta][5])
+
+| Minor added              | Additional required courses / electives                                                                                                                        | Removed / Waived courses                                                                                          |
+| ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| **Aerospace**            | ENAE 410, 411; Computer Eng 335; Electrical Eng 301; Engineering 501 & 502; 9 units Aero electives. ([University of Calgary in Alberta][5])                    | Chemistry 379; MECH 337; MECH 501 & 502; 12 units ME technical electives. ([University of Calgary in Alberta][5]) |
+| **Biomedical**           | BMEN 301, 309, 401, 415; 9 units BME electives; choose 3 units from either ME or BME electives. ([University of Calgary in Alberta][5])                        | Chemistry 379; 12 units ME electives; 3 units complementary studies. ([University of Calgary in Alberta][5])      |
+| **Digital**              | Digital Eng 310, 311, 410, 411, 510, 511; 3 units DE electives. ([University of Calgary in Alberta][5])                                                        | Chemistry 379; 12 units ME electives. ([University of Calgary in Alberta][5])                                     |
+| **Energy & Environment** | ENEE 355, 377; Energy Management 301; SCIE 529; 6 units Energy & Env electives; plus 3 units from ME or E&E electives. ([University of Calgary in Alberta][5]) | 3 units complementary studies; 12 units ME electives. ([University of Calgary in Alberta][5])                     |
+| **Manufacturing**        | Manufacturing Eng 514; 9 units Manufacturing electives. ([University of Calgary in Alberta][5])                                                                | 12 units ME electives. ([University of Calgary in Alberta][5])                                                    |
+| **Mechatronics**         | MECH 561, 562; Manufacturing Eng 533; 6 units Mechatronics electives. ([University of Calgary in Alberta][5])                                                  | 12 units ME electives. ([University of Calgary in Alberta][5])                                                    |
+| **Petroleum**            | PETR 523; 9 units Petroleum electives. ([University of Calgary in Alberta][5])                                                                                 | 12 units ME electives. ([University of Calgary in Alberta][5])                                                    |
+
+This table shows how choosing a minor affects which courses you take and which from your “regular” major are replaced — thus careful scheduling is required.
+
+---
+
+## ✅ My Recommendation (If you’re planning to add a Minor) — What You Should Do Now
+
+1. Use the **latest UCalgary Academic Calendar** (online) to look at the “Approved Technical Electives for Minors” lists — these change occasionally.
+2. Sketch a **4- to 5-year plan** (including summer/ internship) with your major + minor to check feasibility.
+3. Check for **course prereqs / overlaps** especially if you choose a minor like Aerospace, Biomedical, Digital, or Mechatronics.
+4. Apply for the minor in first year (during the Winter Term), ideally after doing well in your first 10 courses — since admission is competitive. ([University of Calgary Calendar][2])
+5. Reach out to the **Engineering Student Centre / Associate Dean** to confirm that overlap rules are okay for your chosen major/minor combination. ([University of Calgary in Alberta][1])
+
+---
+
+If you like — I can **build a full table** (for **all minors × all allowed majors**) that shows, for each combination: **which courses are required, which courses are waived/ replaced, and total extra units**.
+Do you want me to build that table for you now (in Markdown)?
+
+[1]: https://ucalgary.ca/pubs/calendar/archives/2021/sc-3-4.html?utm_source=chatgpt.com "University of Calgary : 3.4 Program Requirements"
+[2]: https://calendar.ucalgary.ca/pages/d965a676614d4febbe55238e11e72fce?utm_source=chatgpt.com "(EN) 3.1 Admissions | UCalgary Calendar"
+[3]: https://schulich.ucalgary.ca/future-students/undergraduate/programs/minors/aerospace-engineering?utm_source=chatgpt.com "Minor in Aerospace Engineering | Schulich School of Engineering | University of Calgary"
+[4]: https://ucalgary.ca/pubs/calendar/archives/2022/aerospace-engineering.html?utm_source=chatgpt.com "University of Calgary : Aerospace Engineering ENAE"
+[5]: https://www.ucalgary.ca/pubs/calendar/archives/2020/en-4-7.html?utm_source=chatgpt.com "University of Calgary : 4.7 Mechanical Engineering"
+[6]: https://schulich.ucalgary.ca/future-students/undergraduate/programs/minors/biomedical-engineering?utm_source=chatgpt.com "Minor in Biomedical Engineering | Schulich School of Engineering | University of Calgary"
+[7]: https://coursedog-pdfs-public-prod.s3.us-east-2.amazonaws.com/ucalgary_peoplesoft-catalog-1713813436165.pdf?utm_source=chatgpt.com "UCalgary
+U Calgary 2024-2025 Calendar"
+[8]: https://www.ucalgary.ca/pubs/calendar/archives/2023/en-4-15.html?utm_source=chatgpt.com "4.15 Approved Technical Electives for Minors"
+[9]: https://schulich.ucalgary.ca/future-students/undergraduate/programs/minors/digital-engineering?utm_source=chatgpt.com "Minor in Digital Engineering | Schulich School of Engineering | University of Calgary"
+[10]: https://coursedog-pdfs-public-prod.s3.us-east-2.amazonaws.com/ucalgary_peoplesoft-catalog-1717097897544.pdf?utm_source=chatgpt.com "UCalgary
+U Calgary 2024-2025 Calendar"
+[11]: https://schulich.ucalgary.ca/future-students/undergraduate/programs/minors/energy-and-environment?utm_source=chatgpt.com "Minor in Energy and Environment"
+[12]: https://schulich.ucalgary.ca/ceere/programs/undergraduate-minor?utm_source=chatgpt.com "Undergraduate minor: Energy and environment | CEERE"
+[13]: https://calendar.ucalgary.ca/pages/52b8fdeb9951425aa9d34c23ee6bbb2a?utm_source=chatgpt.com "Undergraduate Minor Programs - UCalgary Calendar"
+[14]: https://calendar.ucalgary.ca/pages/820e791def22431babd4b2fb7f725ce4?utm_source=chatgpt.com "(EN) 1. Summary of Degree Programs for the Schulich School of Engineering | UCalgary Calendar"
+[15]: https://schulich.ucalgary.ca/future-students/undergraduate/programs/minors?utm_source=chatgpt.com "Minors | Schulich School of Engineering | University of Calgary"

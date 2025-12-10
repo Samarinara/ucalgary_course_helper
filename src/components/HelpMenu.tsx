@@ -32,7 +32,7 @@ const HelpMenu: React.FC<HelpMenuProps> = ({ className = "" }) => {
 				onClick={openModal}
 				className={`flex items-center gap-2 px-4 py-2 text-sm font-semibold rounded-full shadow-md transition-colors ${className}`}
 				style={{
-					backgroundColor: "#FCCA00",
+					backgroundColor: "#FFCD00",
 					color: "#1f2937",
 				}}
 			>

@@ -176,7 +176,7 @@ export default function Home() {
 			<div className="flex-1 flex flex-col p-4">
 				<div className="flex items-center justify-between mb-4">
 					<h1 className="text-2xl font-bold text-slate-800">
-						Engineering Course Graph
+						UCalgary Courseweb
 					</h1>
 					<div className="flex items-center space-x-2">
 						<AboutMenu />
@@ -217,8 +217,8 @@ export default function Home() {
 							key={tab.id}
 							onClick={() => setActiveTab(tab.id as any)}
 							className={`flex-1 px-3 py-2 text-sm font-medium rounded-md transition-colors ${activeTab === tab.id
-									? "bg-white text-slate-900 shadow-sm"
-									: "text-slate-600 hover:text-slate-900"
+								? "bg-white text-slate-900 shadow-sm"
+								: "text-slate-600 hover:text-slate-900"
 								}`}
 						>
 							{tab.label}

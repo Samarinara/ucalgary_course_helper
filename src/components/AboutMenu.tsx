@@ -10,7 +10,7 @@ const TECH_STACK = ["Next.js", "React", "TypeScript", "Tailwind"];
 
 const AboutModalContent: React.FC<{ onClose: () => void }> = ({ onClose }) => {
 	const navigateToGithub = () => {
-		window.open("https://github.com/samarinara/ucalgary-courses", "_blank");
+		window.open("https://github.com/samarinara/ucalgary_course_helper", "_blank");
 	};
 
 	const navigateToWebsite = () => {
